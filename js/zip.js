@@ -101,24 +101,36 @@ let zipBlob = null;
 
 // Mostrar nomes dos arquivos selecionados
 fileInput.addEventListener("change", () => {
-  const files = Array.from(fileInput.files);
-  fileNameDisplay.textContent = files.length > 0
-    ? files.map(f => f.name).join(", ")
-    : "Nenhum arquivo selecionado.";
+    const files = Array.from(fileInput.files);
+    fileNameDisplay.textContent = files.length > 0
+        ? files.map(f => f.name).join(", ")
+        : "Nenhum arquivo selecionado.";
+
+    const nomesFormatados = files.map(file => {
+    const nome = file.name;
+        if (nome.length > 15) {
+        const ext = nome.split('.').pop();
+        return `${nome.substring(0, 10)}...${ext}`;
+        }
+        return nome;
+    });
+    fileNameDisplay.textContent = nomesFormatados.join(', ');
 });
+
+
 
 // Obter o nível de compressão conforme escolha do usuário
 function getCompressionLevel(level) {
-  switch (level) {
-    case "low":
-      return 1;
-    case "normal":
-      return 6;
-    case "high":
-      return 9;
-    default:
-      return 6;
-  }
+    switch (level) {
+        case "low":
+        return 1;
+        case "normal":
+        return 6;
+        case "high":
+        return 9;
+        default:
+        return 6;
+    }
 }
 
 // Função para atualizar progresso

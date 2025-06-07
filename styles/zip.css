@@ -97,6 +97,8 @@
                 & p{
                     position: relative;
                     margin-left: 0.5rem;
+                    flex-wrap: nowrap;
+                    max-width: 20rem;
 
                     &::after{
                         --barra: var(--text-color-hero);
@@ -167,6 +169,8 @@
             --btn-border: var(--shadow-card-btn);
             margin-top: 2rem;
             flex-direction: column;
+
+            margin-inline: auto;
             
             & .button-zip{
                 --bg-btn: var(--background-cards);
@@ -249,32 +253,44 @@
                 position: relative;
             }
 
-            & small{
-                & a{
-                    &:hover{
-                        color: #5501dd;
+            
+            & .alert{
+                justify-content: space-between;
+                & small{
+                    & a{
+                        &:hover{
+                            color: #5501dd;
+                        }
                     }
                 }
             }
 
-            & .uploads{
+            & .upload{
 
-                & button{
-                    --bg-button-remove: var(--shadow-card-btn);
-                    --bg-button-remove-hover: var(--btn-hover-shadow);
-
-                    font: var(--button-remove);
-                    border: none;
-                    background-color: var(--bg-button-remove);
-                    padding: 0.5rem 0.8rem;
-                    border-radius: 1.5rem;
-
-                    &:hover{
-                        background: var(--bg-button-remove-hover);
+                & .uploads{
+    
+                     & p{
+                        max-width: 40rem;
                     }
+    
+                    & button{
+                        --bg-button-remove: var(--shadow-card-btn);
+                        --bg-button-remove-hover: var(--btn-hover-shadow);
+    
+                        font: var(--button-remove);
+                        border: none;
+                        background-color: var(--bg-button-remove);
+                        padding: 0.5rem 0.8rem;
+                        border-radius: 1.5rem;
+    
+                        &:hover{
+                            background: var(--bg-button-remove-hover);
+                        }
+                    }
+    
                 }
-
             }
+
 
             & .btn-zip{
                 flex-direction: row;

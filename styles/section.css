@@ -636,6 +636,7 @@ header.container{
     & .cards{
         margin-top: 1.5rem;
         flex-direction: column;
+        margin-inline: auto;
         width: 100%;
         
         & .card{
@@ -657,7 +658,6 @@ header.container{
     
         & .cards{
             margin-top: 2.5rem;
-            justify-content: center;
             gap: 2rem;
 
             width: 70%;

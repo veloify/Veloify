@@ -11,17 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <!-- script -->
-        <script
-            async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5418306985045065"
-            crossorigin="anonymous">
-        </script>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="../styles/index.css">
+
+        <link rel="shortcut icon" href="../assets/image/favicon.png" type="image/x-icon">
 
         <title>Compactar ZIP</title>
     </head>
@@ -112,18 +108,22 @@
                 <div class="load">
                     <span class="porcentagem"></span>
                 </div>
-                <small>Aceita: .jpg, .png, pdf, zip e outros - <a href="#">saiba mais</a></small>
+                <div class="alert flex">
+                    <small>Suporta até 1.5GB</small>
+                    <small>Suporta: .jpg, .png, pdf, zip e outros - <a href="#">saiba mais</a></small>
+                </div>
 
                 <div class="upload">
                     <p>Arquivos carregados</p>
                     <div class="uploads flex">
                         <p id="fileName">nome do arquivo.zip</p>
-                        <button>Remover</button>
+                        <!-- em breve -->
+                        <!-- <button id="remove">Remover</button> -->
                     </div>
                 </div>
 
                 <div class="file-name">
-                    <p>Nome do arquivo</p>
+                    <p class="flex">Nome do arquivo</p>
                     <input type="text" id="newName" placeholder="Digite o nome do arquivo (Opcional)">
                 </div>
 
