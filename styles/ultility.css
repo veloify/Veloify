@@ -1,0 +1,99 @@
+.container{
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+}
+
+.desktop-only{
+    display: none;
+}
+.tablet-only{
+    display: none;
+}
+
+@media (width >= 48em){
+    .container{
+        --max-width: 100%;
+    }
+
+    .mobile-only{
+        display: none;
+    }
+
+    .tablet-only{
+        display: initial;
+    }
+
+    .btn-hover:hover{
+        transform: scale(1.05);
+    }
+}
+
+@media (width >= 80em){
+    .container{
+        --max-width: 100%;
+    }
+    
+    .tablet-only{
+        display: none;
+    }
+    .desktop-only{
+        display: initial;
+    }
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font: var(--h1);
+}
+h2{
+    font: var(--h2);
+}
+h3{
+    font: var(--h3);
+}
+p{
+    font: var(--text);
+}
+
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+.gap-1\.5{
+    gap: 1.5rem;
+}
+.gap-2{
+    gap: 2rem;
+}
+
+ul[rule='list']{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.card{
+    background-color: var(--background-cards);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+
+    color: var(--text-color-secondary);
+}

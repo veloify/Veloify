@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- fonte Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- fonte Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/index.css">
+
+        <title>Compactar ZIP</title>
+    </head>
+    <body>
+        <header class="container flex">
+
+            <nav class="flex gap-1">
+                
+                <a onclick="toggleMenu()" class="flex menu" href="#">
+                    <strong>Menu</strong>
+                    <svg
+                        width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.8125 10.5C17.8125 10.7486 17.7137 10.9871 17.5379 11.1629C17.3621 11.3387 17.1236 11.4375 16.875 11.4375H3.125C2.87636 11.4375 2.6379 11.3387 2.46209 11.1629C2.28627 10.9871 2.1875 10.7486 2.1875 10.5C2.1875 10.2514 2.28627 10.0129 2.46209 9.83709C2.6379 9.66127 2.87636 9.5625 3.125 9.5625H16.875C17.1236 9.5625 17.3621 9.66127 17.5379 9.83709C17.7137 10.0129 17.8125 10.2514 17.8125 10.5ZM3.125 6.4375H16.875C17.1236 6.4375 17.3621 6.33873 17.5379 6.16291C17.7137 5.9871 17.8125 5.74864 17.8125 5.5C17.8125 5.25136 17.7137 5.0129 17.5379 4.83709C17.3621 4.66127 17.1236 4.5625 16.875 4.5625H3.125C2.87636 4.5625 2.6379 4.66127 2.46209 4.83709C2.28627 5.0129 2.1875 5.25136 2.1875 5.5C2.1875 5.74864 2.28627 5.9871 2.46209 6.16291C2.6379 6.33873 2.87636 6.4375 3.125 6.4375ZM16.875 14.5625H3.125C2.87636 14.5625 2.6379 14.6613 2.46209 14.8371C2.28627 15.0129 2.1875 15.2514 2.1875 15.5C2.1875 15.7486 2.28627 15.9871 2.46209 16.1629C2.6379 16.3387 2.87636 16.4375 3.125 16.4375H16.875C17.1236 16.4375 17.3621 16.3387 17.5379 16.1629C17.7137 15.9871 17.8125 15.7486 17.8125 15.5C17.8125 15.2514 17.7137 15.0129 17.5379 14.8371C17.3621 14.6613 17.1236 14.5625 16.875 14.5625Z" fill="#1F2937"/>
+                    </svg>
+                </a>
+                <div id="menu" class="flex">
+
+                    <a class="close" onclick="toggleMenu()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <rect width="16" height="16" fill="none"/>
+                            <line x1="2" y1="2" x2="14" y2="14" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="14" y1="2" x2="2" y2="14" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+
+                    
+                    <a title="Clique para ver o home" class="flex" href="../index.html">Home</a>
+
+                    <div class="separetor grid">
+                        <h3>serviços</h3>
+                        <a title="Clique para gerar arquivo zip" class="flex" href="#">Gerar ZIP</a>
+                        
+                        <a title="Clique para gerar arquivo pdf" class="flex" href="#">Gerar PDF</a>
+
+                        <a title="Clique para criar seu currículo" class="flex" href="#">Crie seu currículo</a>
+                        <a title="Clique para criar seu currículo" class="flex" href="#">veja outros serviços</a>
+                    </div>
+
+                    
+                    <div class="separetor grid">
+                        <h3>Ajuda</h3>
+                        <a title="Clique para ver nossa central de ajuda" class="flex" href="#">central de atendimento</a>
+                    </div>
+
+                    <div class="separetor grid">
+                        <h3>Tema</h3>
+
+                        <div class="tema flex">
+                            <span id="lightDark" class="nomeTema">Claro</span>
+                            <label class="switch">
+
+                                <input type="checkbox"  id="tema-toggle" onchange="trocarTema()" class="toggletema">
+
+                                <span class="circulo"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+
+            <div class="logo flex">
+                <img title="logo da Veloify" src="../assets/image/logo.png" alt="logo da Veloify">
+                <strong>Veloify</strong>
+            </div>
+            
+        </header>
+
+        <section id="create">
+            <header class="container grid gap-1">
+                <h1>Gerar  arquivo Zip</h1>
+                <h3>Crie seu arquivo zip com praticidade e velocidade</h3>
+            </header>
+
+            <div class="container grid generate">
+                <p>crie seu arquivo zip agora</p>
+                <div class="file grid">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.2716 12.0147C22.281 12.0147 22.2904 12.0147 22.3 12.0147C25.448 12.0147 28 14.7059 28 18.0257C28 21.1197 25.7833 23.6677 22.9333 24M22.2716 12.0147C22.2904 11.7947 22.3 11.5719 22.3 11.3468C22.3 7.28927 19.1809 4 15.3333 4C11.6894 4 8.69889 6.9502 8.39249 10.7092M22.2716 12.0147C22.142 13.5301 21.5762 14.9128 20.7075 16.022M8.39249 10.7092C5.17967 11.0317 2.66663 13.8852 2.66663 17.3577C2.66663 20.5889 4.84245 23.2843 7.73329 23.9031M8.39249 10.7092C8.59243 10.6891 8.79503 10.6789 8.99996 10.6789C10.426 10.6789 11.742 11.1759 12.8006 12.0147" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.3333 17.3333V28M15.3333 17.3333C14.3997 17.3333 12.6554 19.9924 12 20.6667M15.3333 17.3333C16.2669 17.3333 18.0113 19.9924 18.6667 20.6667" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <p>Clique aqui para<br>selecionar arquivos</p>
+                    <input type="file" id="fileInput" multiple>
+                </div>
+                <div class="load">
+                    <span class="porcentagem"></span>
+                </div>
+                <small>Aceita: .jpg, .png, pdf, zip e outros - <a href="#">saiba mais</a></small>
+
+                <div class="upload">
+                    <p>Arquivos carregados</p>
+                    <div class="uploads flex">
+                        <p id="fileName">nome do arquivo.zip</p>
+                        <button>Remover</button>
+                    </div>
+                </div>
+
+                <div class="file-name">
+                    <p>Nome do arquivo</p>
+                    <input type="text" id="newName" placeholder="Digite o nome do arquivo (Opcional)">
+                </div>
+
+                <div class="level grid">
+                    <label>Escolha o novel de compactação</label>
+                    <select id="nivelCompactacao">
+                    <option value="low">Rápido (Menor Compactação)</option>
+                    <option value="normal">Equilibrado (Recomendado)</option>
+                    <option value="high">Máximo (Maior Compactação)</option>
+                    </select>
+                </div>
+
+                <div class="btn-zip flex gap-1">
+                    <button class="button-zip" id="compressBtn">Compactar Zip</button>
+                    <button class="button-zip" id="downloadBtn" disabled>DOWNLOAD</button>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="feedback">
+
+            <a>
+                X
+            </a>
+            
+            <h3>🗣️ Sua opinião é muito importante!</h3>
+            <p>Queremos evoluir sempre, e seu feedback é essencial para melhorar o Veloify!</p>
+
+            <div class="flex gap-1">
+                <div class="feed">
+                    <input type="radio" id="Excelente" name="feedback">
+                    <p>Excelente 😍</p>
+                </div>
+                <div class="feed">
+                    <input type="radio" id="muitoBom" name="feedback">
+                    <p>Muito bom 😊</p>
+                </div>
+                <div class="feed">
+                    <input type="radio" id="bom" name="feedback">
+                    <p>Bom 🙂</p>
+                </div>
+                <div class="feed">
+                    <input type="radio" id="regular" name="feedback">
+                    <p>Regular 😕</p>
+                </div>
+                <div class="feed">
+                    <input type="radio" id="ruim" name="feedback">
+                    <p>Ruim 😞</p>
+                </div>
+            </div>
+
+            <div class="textarea">
+                <textarea name="suggestion" id="suggestion" placeholder="Conte como podemos deixar o Veloify ainda melhor! (opcional):"></textarea>
+            </div>
+            <button class="grid">Enviar</button>
+        </div>
+
+        <div class="about container">
+            <h2>O que é arquivo zip?</h2>
+            <p>Um arquivo ZIP é um formato que compacta e agrupa vários arquivos ou pastas em um só, reduzindo o tamanho e facilitando o envio ou armazenamento. Ele pode ser aberto facilmente em qualquer sistema e pode ter senha. É útil para organizar e compartilhar vários arquivos de uma vez.</p>
+        </div>
+
+        <div class="cards container grid">
+            <h2>Criando um arquivo ZIP</h2>
+            <div class="flex gap-1">
+                <div class="card grid gap-1">
+                    <h3>1° Passo</h3>
+                    <p>Clique ou arrasta a pasta/arquivo que deseja até aqui.</p>
+                    <img src="../assets/image/zip-passo1.png" alt="">
+                </div>
+                <div class="card grid gap-1">
+                    <h3>2° Passo</h3>
+                    <p>Clique em “Digite o nome do arquivo” para nomear o arquivo zip (Opcional).</p>
+                    <img src="../assets/image/renomear.png" alt="">
+                </div>
+                <div class="card grid gap-1">
+                    <h3>3° Passo</h3>
+                    <p>Clique no botão “Compactar zip”.</p>
+                    <img src="../assets/image/compactar.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <footer class="container grid gap-2">
+            <ul rule="list" class="grid gap-1">
+                <h2>O que o Veloify oferece?</h2>
+                <li><a title="Clique para gerar arquivo zip" href="#">Compactação ZIP</a></li>
+                <li><a title="Clique para gerar PDF" href="#">gera pdf</a></li>
+                <li><a title="Clique para criar currículos" href="#">Crie currículos</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>politica e termos do Veloify</h2>
+                <li><a title="Clique para ler nossa política de privacidade" href="web/politicadeprivacidade.html">Política de Privacidade</a></li>
+                <li><a title="Clique para ler os nossos termos de uso" href="web/termosdeuso.html">Termos de Uso</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>Em breve</h2>
+                <li>Proteção por senha: PDF e Zip</li>
+                <li>Conversor de Arquivos</li>
+            </ul>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+        <script src="../js/zip.js"></script>
+        <script src="../js/scripts.js"></script>
+
+    </body>
+</html>

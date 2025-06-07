@@ -1,0 +1,31 @@
+📄 Termos de Uso – Veloify
+Última atualização: [data de hoje]
+
+1. Aceitação dos Termos
+Ao acessar e utilizar a plataforma Veloify, você concorda com os presentes Termos de Uso. Se não concordar com algum dos termos, por favor, não utilize o serviço.
+
+2. Descrição do Serviço
+A plataforma permite aos usuários criar arquivos PDF, compactar arquivos em ZIP e, futuramente, acessar recursos adicionais, como geração de currículos e inteligência artificial.
+
+3. Uso Gratuito e Recursos Premium
+Atualmente, a plataforma oferece funcionalidades básicas de forma gratuita. Recursos avançados poderão ser disponibilizados mediante assinatura ou pagamento único.
+
+4. Armazenamento de Arquivos
+Arquivos enviados ou gerados na plataforma são armazenados temporariamente por segurança e conveniência do usuário. Após o período informado, os arquivos são automaticamente excluídos.
+
+5. Privacidade e Segurança
+Não coletamos ou compartilhamos dados sensíveis inseridos nos arquivos criados. Porém, é de responsabilidade do usuário evitar inserir informações confidenciais sem criptografia adequada.
+
+6. Propriedade Intelectual
+Todo o conteúdo, design, nome, logotipo e funcionalidades são propriedade exclusiva da equipe de desenvolvimento da plataforma, sendo proibida a cópia ou uso sem autorização.
+
+7. Responsabilidade do Usuário
+Não é permitido o uso da plataforma para fins ilegais ou abusivos.
+
+8. O usuário é o único responsável pelo conteúdo dos arquivos criados ou enviados.
+
+9. Modificações dos Termos
+A equipe do Veloify pode alterar estes termos a qualquer momento. Ao continuar usando a plataforma, você concorda com as mudanças aplicadas.
+
+10. Contato
+Para dúvidas, sugestões ou solicitações, entre em contato pelo e-mail: suporte@[seudominio].com

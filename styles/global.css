@@ -1,0 +1,74 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Cores */
+    --background-color: #F5F5F5;
+    --text-color-primary:#1F2937;
+    --text-color-secondary: #ffffff;
+    --text-color-hero: #7C3AED;
+
+    --background-success: #BBF7D0;
+    --success-message: #14532D;
+
+    --background-erro: #FCA5A5;
+    --erro-message: #7F1D1D;
+
+    --background-cards: #6B28D9;
+    --shadow-card-btn: #D8B1FF;
+    --btn-hover-shadow: #B082FF;
+
+    --background-btn: #A245FF;
+    --background-header-footer: #DCC1F6;
+
+    /* fontes */
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+
+    --h1: 700 2rem/1.2 var(--font-poppins);
+    --h2: 700 1.25rem/1.5 var(--font-poppins);
+    --h3: 700 1.125rem/1.5 var(--font-poppins);
+    --text: 600 1rem/1.5 var(--font-montserrat);
+    --text-sm: 400 .75rem/1.5 var(--font-montserrat);
+    --text-md: 400 .875rem/1.5 var(--font-poppins);
+
+    --font-btn-primary: 700 1.125rem/1.5 var(--font-poppins);
+    --font-btn-secondary: 500 1rem/1.5 var(--font-poppins);
+
+    --button-remove: 500 0.75rem/1.5 var(--font-montserrat);
+    --button-send: 600 0.75rem/1.5 var(--font-montserrat);
+
+    /* padding eixo x */
+
+    --px-lg: 1.5rem;
+}
+
+@media (width >= 48em){
+    :root{
+
+        --h1: 700 2.5rem/1.2 var(--font-poppins);
+        --h2: 700 2rem/1.5 var(--font-poppins);
+        --h3: 700 1.125rem/1.5 var(--font-poppins);
+
+        --font-btn-primary: 700 1.25rem/1.2 var(--font-poppins);
+        --font-btn-secondary: 500 1rem/1.2 var(--font-poppins);
+
+        --px-lg: 2rem;
+    }
+}
+
+@media (width >= 80em){
+    :root{
+
+        --h1: 700 4rem/1.2 var(--font-poppins);
+
+        --font-btn-primary: 700 1.5rem/1.5 var(--font-poppins);
+        --font-btn-secondary: 500 1rem/1.5 var(--font-poppins);
+
+        --px-lg: 2rem;
+    }
+}

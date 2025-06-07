@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <!-- fonte Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- fonte Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles/index.css">
+
+        <title>Veloify</title>
+        
+    </head>
+
+    <body>
+        <header class="container flex">
+
+            <nav class="flex gap-1">
+                
+                <a onclick="toggleMenu()" class="flex menu" href="#">
+                    <strong>Menu</strong>
+                    
+                    <svg
+                        width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.8125 10.5C17.8125 10.7486 17.7137 10.9871 17.5379 11.1629C17.3621 11.3387 17.1236 11.4375 16.875 11.4375H3.125C2.87636 11.4375 2.6379 11.3387 2.46209 11.1629C2.28627 10.9871 2.1875 10.7486 2.1875 10.5C2.1875 10.2514 2.28627 10.0129 2.46209 9.83709C2.6379 9.66127 2.87636 9.5625 3.125 9.5625H16.875C17.1236 9.5625 17.3621 9.66127 17.5379 9.83709C17.7137 10.0129 17.8125 10.2514 17.8125 10.5ZM3.125 6.4375H16.875C17.1236 6.4375 17.3621 6.33873 17.5379 6.16291C17.7137 5.9871 17.8125 5.74864 17.8125 5.5C17.8125 5.25136 17.7137 5.0129 17.5379 4.83709C17.3621 4.66127 17.1236 4.5625 16.875 4.5625H3.125C2.87636 4.5625 2.6379 4.66127 2.46209 4.83709C2.28627 5.0129 2.1875 5.25136 2.1875 5.5C2.1875 5.74864 2.28627 5.9871 2.46209 6.16291C2.6379 6.33873 2.87636 6.4375 3.125 6.4375ZM16.875 14.5625H3.125C2.87636 14.5625 2.6379 14.6613 2.46209 14.8371C2.28627 15.0129 2.1875 15.2514 2.1875 15.5C2.1875 15.7486 2.28627 15.9871 2.46209 16.1629C2.6379 16.3387 2.87636 16.4375 3.125 16.4375H16.875C17.1236 16.4375 17.3621 16.3387 17.5379 16.1629C17.7137 15.9871 17.8125 15.7486 17.8125 15.5C17.8125 15.2514 17.7137 15.0129 17.5379 14.8371C17.3621 14.6613 17.1236 14.5625 16.875 14.5625Z" fill="#1F2937"/>
+                    </svg>
+                        
+                </a>
+                <div id="menu" class="flex">
+
+                    <a class="close" onclick="toggleMenu()">
+                        <img src="assets/icons/close.svg" alt="">
+                    </a>
+
+                    
+                    <a title="Clique para ver o home" class="flex" href="#hero">Home</a>
+
+                    <div class="separetor grid">
+                        <h3>serviços</h3>
+                        <a title="Clique para gerar arquivo zip" class="flex" href="web/zip.html">Gerar ZIP</a>
+                        
+                        <a title="Clique para gerar arquivo pdf" class="flex" href="#">Gerar PDF</a>
+
+                        <a title="Clique para criar seu currículo" class="flex" href="#">Crie seu currículo</a>
+                        <a title="Clique para criar seu currículo" class="flex" href="#">veja outros serviços</a>
+                    </div>
+
+                    
+                    <div class="separetor grid">
+                        <h3>Ajuda</h3>
+                        <a title="Clique para ver nossa central de ajuda" class="flex" href="#">central de atendimento</a>
+                    </div>
+
+                    <div class="separetor grid">
+                        <h3>Tema</h3>
+
+                        <div class="tema flex">
+                            <span id="lightDark" class="nomeTema"></span>
+                            <label class="switch">
+
+                                <input type="checkbox"  id="tema-toggle" onchange="trocarTema()" class="toggletema">
+
+                                <span class="circulo"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+
+            <div class="logo flex">
+                <img title="logo da Veloify" src="assets/image/logo.png" alt="logo da Veloify">
+                <strong>Veloify</strong>
+            </div>
+            
+        </header>
+
+        <section id="hero" class="container flex gap-2">
+            
+            <div class="hero-logo flex">
+                <img src="assets/image/raiz 1.png" alt="">
+                <img src="assets/image/bg-logo.png" alt="">
+                <img src="assets/image/ray.png" alt="">
+                <img src="assets/image/raiz 2.png" alt="">
+            </div>
+            <div class="hero-text grid">
+                <h1>Veloify Compacta tudo em segundos.</h1>
+                <div class="buttons grid gap-1">
+                    <a title="Clique para gerar arquivo zip" class="btn btn-hover btn-1" href="#">Compactar Zip agora</a>
+                    <a title="Clique para ver todas nossas ferramentas" class="btn btn-hover btn-2" href="#">Ver outras ferramentas</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="container flex">
+            <header>
+                <h2>O que você pode fazer com o<br>Veloify</h2>
+            </header>
+
+            <div class="cards flex gap-2">
+
+                <div class="card flex">
+                    <h3>Criar ZIP</h3>
+                    <img src="assets/icons/image-zip.svg" alt="Imagem de um arquivo zip">
+                    <p>Cria zip simples e fácil </p>
+                    <a title="Clique para gerar arquivo zip" class="btn-hover" href="#">Criar arquivo Zip</a>
+                </div>
+
+                <div class="card flex">
+                    <h3>Gerar PDF</h3>
+                    <img src="assets/icons/image-pdf.svg" alt="Imagem de um arquivo pdf">
+                    <p>Gerar PDF em segundos</p>
+                    
+                    <a title="Clique para gerar arquivo pdf" class="btn-hover" href="#">Gerar PDF</a>
+                </div>
+
+                <div class="card flex">
+                    <h3>Crie currículo</h3>
+                    <img src="assets/icons/image-cv.svg" alt="Imagem de um currículo">
+                    <p>Crie currículos com praticidade<br><strong>EM BREVE</strong></p>
+                    <a title="Clique para criar Currículo" class="btn-hover" href="#">Criar currículos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container grid gap-2">
+            <header>
+                <h2>O que é Veloify?</h2>
+            </header>
+            <div class="flex gap-2">
+                <div class=" image">
+                    <img src="assets/image/cv-foto.png" alt="imagem de uma computador com um Currículo">
+                    <img src="assets/image/zip-foto.png" alt="imagem de uma computador com um arquivo zip">
+                    <img src="assets/image/pdf-foto.png" alt="imagem de um arquivo pdf">
+                </div>
+                <p>O Veloify é a maneira mais rápida e segura de criar arquivos ZIP, gerar PDFs e montar currículos direto do navegador.<br>Sem complicação, sem instalação. Simples, prático e feito para o seu dia a dia.</p>
+            </div>
+        </section>
+
+        <section id="benefits" class="container">
+            <header>
+                <h2>Por que usar o Veloify</h2>
+            </header>
+            <div class="cards flex gap-1.5">
+                <div class="card grid">
+                    <h3>Grátis</h3>
+                    <img src="assets/icons/ico-gratis.svg" alt="imagem de '100% gratís'">
+                    <p>Funcionalidades essenciais 100% gratuitas.</p>
+                </div>
+                <div class="card grid">
+                    <h3>Rapido</h3>
+                    <img src="assets/icons/ico-fast.svg" alt="imagem de uma raio">
+                    <p>Processamento em segundos, sem complicações.</p>
+                </div>
+                <div class="card grid">
+                    <h3>Privacidade</h3>
+                    <img src="assets/icons/ico-privacy.svg" alt="imagem de um escudo">
+                    <p>Seus dados são seus — sem rastreamento.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="container grid gap-2">
+            <ul rule="list" class="grid gap-1">
+                <h2>O que o Veloify oferece?</h2>
+                <li><a title="Clique para gerar arquivo zip" href="#">Compactação ZIP</a></li>
+                <li><a title="Clique para gerar PDF" href="#">gera pdf</a></li>
+                <li><a title="Clique para criar currículos" href="#">Crie currículos</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>politica e termos do Veloify</h2>
+                <li><a title="Clique para ler nossa política de privacidade" href="web/politicadeprivacidade.html">Política de Privacidade</a></li>
+                <li><a title="Clique para ler os nossos termos de uso" href="web/termosdeuso.html">Termos de Uso</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>Em breve</h2>
+                <li>Proteção por senha: PDF e Zip</li>
+                <li>Conversor de Arquivos</li>
+            </ul>
+        </footer>
+
+        <script src="js/scripts.js"></script>
+    </body>
+
+</html>

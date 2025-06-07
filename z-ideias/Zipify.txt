@@ -1,0 +1,109 @@
+O que é o Zipify?
+O Zipify é uma plataforma digital (SaaS) voltada para a criação e gerenciamento inteligente de arquivos. Ele nasce como uma solução simples e rápida para gerar arquivos PDF e ZIP com uma interface moderna e intuitiva, mas seu potencial vai muito além disso.
+
+🚀 Objetivo do Zipify
+Tornar simples, rápido e bonito o processo de criação, compactação, organização e entrega de arquivos digitais — tudo em um só lugar.
+
+🛠️ Funcionalidades atuais (fase inicial)
+Compactador de Zip online
+Gerador de PDF online
+
+Crie PDFs personalizados a partir de formulários simples (como currículo, listas, apresentações).
+
+Layout bonito, com foco em legibilidade e estética.
+
+Gerador de arquivos ZIP
+
+Compacte múltiplos arquivos em um único ZIP com organização por pastas.
+
+Ideal para freelancers, alunos, empresas, etc.
+
+Interface moderna e responsiva
+
+Tema claro e escuro (modo toggle).
+
+Design focado em simplicidade e foco.
+
+🧠 Futuras Funcionalidades (visão de médio/longo prazo)
+📄 Criação de Currículos
+Modelos prontos e personalizáveis.
+
+Exportação em PDF com design profissional.
+
+📚 Organização de Arquivos
+Painel onde o usuário pode armazenar, agrupar e visualizar seus documentos.
+
+Tags, categorias e filtros.
+
+🖼️ Compressão e Otimização
+Ferramentas para comprimir imagens e PDFs.
+
+Ideal para reduzir o tamanho antes de enviar.
+
+🧾 Gerador de Documentos Inteligentes
+Contratos, recibos, propostas, faturas.
+
+Preenchimento automático com dados do usuário.
+
+📊 Assinatura de Documentos (no futuro)
+Sistema de assinatura eletrônica simples.
+
+Validação de identidade e envio por e-mail.
+
+💼 Área de Trabalho do Usuário
+Sistema de login com painel pessoal.
+
+Histórico, downloads, edições recentes.
+
+💰 Modelo de Negócio (previsto)
+Plano Gratuito:
+Acesso às funcionalidades básicas (gerar PDF/ZIP, poucos modelos).
+
+Plano Pago:
+
+Acesso completo a todos os recursos.
+
+Armazenamento em nuvem.
+
+Mais modelos e temas.
+
+Customização de arquivos.
+
+Marca branca (remover logo Zipify).
+
+Geração ilimitada.
+
+🎨 Identidade Visual
+Cores:
+
+Roxo elegante (#7C3AED): modernidade e criatividade.
+
+Verde lima suave (#A7F3D0): inovação e frescor.
+
+Cinza escuro (#111827): neutralidade e foco.
+
+Areia clara (#F3F4F6): sofisticação e leveza.
+
+Estilo:
+
+Moderno, acessível e profissional.
+
+Tipografia limpa.
+
+Design centrado no usuário.
+
+🌐 Público-alvo
+Freelancers
+
+Pequenas empresas
+
+Estudantes e professores
+
+Profissionais de marketing
+
+Criadores de conteúdo
+
+Agências
+
+✨ Visão de Futuro
+Ser a principal plataforma online para gerar, organizar e entregar arquivos personalizados com design e performance — sem complicação.

@@ -1,0 +1,21 @@
+body.dark{
+    --bg-dark: var(--text-color-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-color-secondary);
+    & a, h1, h2, h3{
+        color: var(--text-color-secondary);
+    }
+    & #menu h3, a, span{
+        color: var(--text-color-primary);
+        & strong{
+            color: var(--text-color-secondary);
+        }
+    }
+    & ul li a{
+        color: var(--text-color-secondary);
+    }
+
+    & nav.flex svg path{
+        fill: #ffffff;
+    }
+}

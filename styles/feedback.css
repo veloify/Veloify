@@ -1,0 +1,127 @@
+.feedback{
+    display: none;
+    --body-color: var(--text-color-secondary);
+
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+
+
+    background-color: var(--body-color);
+    margin-inline: auto;
+
+    width: 20rem;
+    padding: 1.25rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25);
+
+    & > a{
+        font: 700 1rem/1.5 var(--font-montserrat);
+        cursor: pointer;
+    }
+
+    & h3{
+        text-align: center;
+        margin-block: 0.75rem;
+    }
+    & > p{
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    & .flex{
+        flex-direction: column;
+
+        & .feed{
+            --border-feed: var(--shadow-card-btn);
+            --border-checked: var(--background-cards);
+
+            
+            border: 1px solid var(--border-feed);
+            border-radius: 1.5rem;
+            padding: 0.5rem 1rem;
+            
+            position: relative;
+            
+            & input[type="radio"]{
+                cursor: pointer;
+                position: absolute;
+                z-index: 1;
+                inset: 0;
+                opacity: 0;
+            }
+
+            &:has(input[type="radio"]:checked){
+                background-color: var(--border-feed);
+                border: 1px solid var(--border-checked);
+            }
+        }
+    }
+
+    & .textarea{
+        margin-top: 1rem;
+
+        & textarea{
+            --text-color: var(--text-color-hero);
+            --border-textarea: var(--text-color-hero);
+            resize: none;
+            width: 100%;
+            height: 6rem;
+            border: 1px solid var(--border-textarea);
+
+            color: var(--text-color);
+            
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+
+            &:focus{
+                outline: 1px solid var(--border-textarea);
+            }
+        }
+    }
+
+    & > button{
+        --bg-btn: var(--background-cards);
+        --btn-border: var(--shadow-card-btn);
+
+        margin-top: 1.5rem;
+        margin-inline: auto;
+
+        cursor: pointer;
+        padding: 0.75rem;
+
+        width: 15rem;
+
+        border: 2px solid var(--btn-border);
+        border-radius: 1.5rem;
+
+        background-color: var(--bg-btn);
+
+        font: var(--button-send);
+        color: var(--text-color-secondary);
+    }
+}
+
+@media (width >= 48em){
+    .feedback{
+        width: 45rem;
+
+
+        & .flex{
+            flex-direction: row;
+        }
+
+
+        & .textarea{
+
+            & textarea{
+                height: 8rem;
+            }
+        }
+    }
+}
+
+
+
+

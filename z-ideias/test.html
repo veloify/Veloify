@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download ZIP</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <input type="text" id="newName" placeholder="Nome do arquivo ZIP" />
+  <button id="generateBtn">GERAR ZIP</button>
+  <button class="button-zip" id="downloadBtn" disabled>DOWNLOAD</button>
+
+  <script>
+    let zipBlob = null;
+
+    document.getElementById('generateBtn').addEventListener('click', () => {
+      const zip = new JSZip();
+      zip.file("leia-me.txt", "Conteúdo de exemplo dentro do ZIP.");
+
+      zip.generateAsync({ type: "blob" }).then((blob) => {
+        zipBlob = blob;
+        document.getElementById('downloadBtn').disabled = false;
+        alert("ZIP gerado! Agora você pode fazer o download.");
+      });
+    });
+
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      if (!zipBlob) return;
+
+      const newName = document.getElementById('newName').value.trim() || 'meu_arquivo.zip';
+      const fileName = newName.endsWith('.zip') ? newName : `${newName}.zip`;
+
+      const url = URL.createObjectURL(zipBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = fileName;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

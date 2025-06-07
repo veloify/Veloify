@@ -1,0 +1,8 @@
+mobile:
+h1: bold 24px
+h2: bold 20px
+h3: bold 18px
+btn: 20px
+btn-secondarys: 14px
+texto padrão: 16px
+text-md: 12px
