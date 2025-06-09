@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        <!-- fonte Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- fonte Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/index.css">
+
+        <link rel="shortcut icon" href="../assets/image/favicon.png" type="image/x-icon">
+
+        <title>Veloify - Termos de uso</title>
+        
+    </head>
+    <body>
+
+        <header class="container flex">
+
+            <nav class="flex gap-1">
+                
+                <a onclick="toggleMenu()" class="flex menu" href="#">
+                    <strong>Menu</strong>
+                    <svg
+                        width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.8125 10.5C17.8125 10.7486 17.7137 10.9871 17.5379 11.1629C17.3621 11.3387 17.1236 11.4375 16.875 11.4375H3.125C2.87636 11.4375 2.6379 11.3387 2.46209 11.1629C2.28627 10.9871 2.1875 10.7486 2.1875 10.5C2.1875 10.2514 2.28627 10.0129 2.46209 9.83709C2.6379 9.66127 2.87636 9.5625 3.125 9.5625H16.875C17.1236 9.5625 17.3621 9.66127 17.5379 9.83709C17.7137 10.0129 17.8125 10.2514 17.8125 10.5ZM3.125 6.4375H16.875C17.1236 6.4375 17.3621 6.33873 17.5379 6.16291C17.7137 5.9871 17.8125 5.74864 17.8125 5.5C17.8125 5.25136 17.7137 5.0129 17.5379 4.83709C17.3621 4.66127 17.1236 4.5625 16.875 4.5625H3.125C2.87636 4.5625 2.6379 4.66127 2.46209 4.83709C2.28627 5.0129 2.1875 5.25136 2.1875 5.5C2.1875 5.74864 2.28627 5.9871 2.46209 6.16291C2.6379 6.33873 2.87636 6.4375 3.125 6.4375ZM16.875 14.5625H3.125C2.87636 14.5625 2.6379 14.6613 2.46209 14.8371C2.28627 15.0129 2.1875 15.2514 2.1875 15.5C2.1875 15.7486 2.28627 15.9871 2.46209 16.1629C2.6379 16.3387 2.87636 16.4375 3.125 16.4375H16.875C17.1236 16.4375 17.3621 16.3387 17.5379 16.1629C17.7137 15.9871 17.8125 15.7486 17.8125 15.5C17.8125 15.2514 17.7137 15.0129 17.5379 14.8371C17.3621 14.6613 17.1236 14.5625 16.875 14.5625Z" fill="#1F2937"/>
+                    </svg>
+                </a>
+                <div id="menu" class="flex">
+
+                    <a class="close" onclick="toggleMenu()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <rect width="16" height="16" fill="none"/>
+                            <line x1="2" y1="2" x2="14" y2="14" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="14" y1="2" x2="2" y2="14" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+
+                    
+                    <a title="Clique para ver o home" class="flex" href="../index.html">Home</a>
+
+                    <div class="separetor grid">
+                        <h3>serviços</h3>
+                        <a title="Clique para gerar arquivo zip" class="flex" href="#">Gerar ZIP</a>
+                        
+                        <a title="Clique para gerar arquivo pdf" class="flex" href="#">Gerar PDF</a>
+
+                        <a title="Clique para criar seu currículo" class="flex" href="#">Crie seu currículo</a>
+                        <a title="Clique para criar seu currículo" class="flex" href="#">veja outros serviços</a>
+                    </div>
+
+                    
+                    <div class="separetor grid">
+                        <h3>Ajuda</h3>
+                        <a title="Clique para ver nossa central de ajuda" class="flex" href="#">central de atendimento</a>
+                    </div>
+
+                    <div class="separetor grid">
+                        <h3>Tema</h3>
+
+                        <div class="tema flex">
+                            <span id="lightDark" class="nomeTema">Claro</span>
+                            <label class="switch">
+
+                                <input type="checkbox"  id="tema-toggle" onchange="trocarTema()" class="toggletema">
+
+                                <span class="circulo"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+
+            <div class="logo flex">
+                <img title="logo da Veloify" src="../assets/image/logo.png" alt="logo da Veloify">
+                <strong>Veloify</strong>
+            </div>
+            
+        </header>
+
+        <section id="termos" class="container">
+            <header>
+                <h2>Termos de Uso – Veloify</h2>
+                <small>Última atualização:  02/05/2025</small>
+            </header>
+
+            <p> 
+                1. Aceitação dos Termos
+                Ao acessar e utilizar a plataforma Veloify, você concorda com os presentes Termos de Uso. Se não concordar com algum dos termos, por favor, não utilize o serviço.
+            </p>
+
+            <p>
+                2. Descrição do Serviço
+                A plataforma permite aos usuários criar arquivos PDF, compactar arquivos em ZIP e, futuramente, acessar recursos adicionais, como geração de currículos e inteligência artificial.
+            </p>
+
+            <p>
+                3. Uso Gratuito e Recursos Premium
+                Atualmente, a plataforma oferece funcionalidades básicas de forma gratuita. Recursos avançados poderão ser disponibilizados mediante assinatura ou pagamento único.
+            </p>
+
+            <p>
+                4. Armazenamento de Arquivos
+                Arquivos enviados ou gerados na plataforma são armazenados temporariamente por segurança e conveniência do usuário. Após o período informado, os arquivos são automaticamente excluídos.
+            </p>
+
+            <p>
+                5. Privacidade e Segurança
+                Não coletamos ou compartilhamos dados sensíveis inseridos nos arquivos criados. Porém, é de responsabilidade do usuário evitar inserir informações confidenciais sem criptografia adequada.
+            </p>
+
+            <p>
+                6. Propriedade Intelectual
+                Todo o conteúdo, design, nome, logotipo e funcionalidades são propriedade exclusiva da equipe de desenvolvimento da plataforma, sendo proibida a cópia ou uso sem autorização.
+            </p>
+
+            <p>
+                7. Responsabilidade do Usuário
+                Não é permitido o uso da plataforma para fins ilegais ou abusivos.
+            </p>
+
+            <p>
+                8. O usuário é o único responsável pelo conteúdo dos arquivos criados ou enviados.
+            </p>
+
+            <p>
+                9. Modificações dos Termos
+                A equipe do Veloify pode alterar estes termos a qualquer momento. Ao continuar usando a plataforma, você concorda com as mudanças aplicadas.
+            </p>
+
+            <p>
+                10. Contato
+                Para dúvidas, sugestões ou solicitações, entre em contato pelo e-mail: suporte@[seudominio].com
+            </p>
+        </section>
+
+        <footer class="container grid gap-2">
+            <ul rule="list" class="grid gap-1">
+                <h2>O que o Veloify oferece?</h2>
+                <li><a title="Clique para gerar arquivo zip" href="#">Compactação ZIP</a></li>
+                <li><a title="Clique para gerar PDF" href="#">gera pdf</a></li>
+                <li><a title="Clique para criar currículos" href="#">Crie currículos</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>politica e termos do Veloify</h2>
+                <li><a title="Clique para ler nossa política de privacidade" href="../pages/politicadeprivacidade.html">Política de Privacidade</a></li>
+                <li><a title="Clique para ler os nossos termos de uso" href="#">Termos de Uso</a></li>
+            </ul>
+
+            <ul rule="list" class="grid gap-1">
+                <h2>Em breve</h2>
+                <li>Proteção por senha: PDF e Zip</li>
+                <li>Conversor de Arquivos</li>
+            </ul>
+        </footer>
+
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

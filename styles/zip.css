@@ -28,11 +28,11 @@
             --border: var(--background-btn);
 
             justify-items: center;
-            padding: 1rem 2.5rem;
             text-align: center;
             color: var(--text-color-secondary);
+            
+            padding-block: 2rem 4rem;
 
-            width: 100%;
             background-color: var(--bg-upload);
             border-radius: 1.5rem;
             outline: 2px dashed var(--border);
@@ -53,11 +53,13 @@
         }
 
         & .load {
-            display: flex;
+            display: none;
             margin-top: 0.75rem;
             align-items: center;
             gap: 1.5rem;
             width: 100%;
+
+            transition: all 0.5s ease;
 
             & span{
                 font:var(--text);
@@ -240,12 +242,13 @@
         & .generate{
 
             & .file{
-                padding: 2.5rem 15rem 5rem;
     
                 text-align: center;
                 color: var(--text-color-secondary);
-    
-                width: 100%;
+
+                padding-block: 3.5rem 6rem;
+                padding-inline: 15rem;
+
                 background-color: var(--bg-upload);
                 border-radius: 1.5rem;
                 outline: 2px dashed var(--border);
@@ -326,6 +329,13 @@
 @media(width >= 80em){
     #create{
         margin-top: 4rem;
+
+        & .generate{
+            & .file{
+                padding-block: 4.5rem 8rem;
+                padding-inline: 25rem;
+            }
+        }
     }
 
     .cards{

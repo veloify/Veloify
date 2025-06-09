@@ -6,78 +6,91 @@ const progressText = document.querySelector(".porcentagem");
 const newNameInput = document.getElementById("newName");
 const downloadBtn = document.getElementById("downloadBtn");
 const nivelSelect = document.getElementById("nivelCompactacao");
-const load = document.querySelector(".load");
-
 
 let zipBlob = null;
 
 // Mostrar nomes dos arquivos selecionados
 fileInput.addEventListener("change", () => {
-
     const files = Array.from(fileInput.files);
-
     fileNameDisplay.textContent = files.length > 0
         ? files.map(f => f.name).join(", ")
         : "Nenhum arquivo selecionado.";
 
     const nomesFormatados = files.map(file => {
-        const nome = file.name;
+    const nome = file.name;
         if (nome.length > 15) {
-            const ext = nome.split('.').pop();
-            return `${nome.substring(0, 10)}...${ext}`;
+        const ext = nome.split('.').pop();
+        return `${nome.substring(0, 10)}...${ext}`;
         }
         return nome;
     });
-
     fileNameDisplay.textContent = nomesFormatados.join(', ');
 });
 
+
+
 // Obter o nível de compressão conforme escolha do usuário
 function getCompressionLevel(level) {
-
     switch (level) {
         case "low":
-            return 1;
+        return 1;
         case "normal":
-            return 6;
+        return 6;
         case "high":
-            return 9;
+        return 9;
         default:
-            return 6;
+        return 6;
     }
-};
+}
+
+// Função para atualizar progresso
+function updateProgress(loaded, total, fileIndex, totalFiles) {
+    // Progresso individual do arquivo atual
+    const fileProgress = (loaded / total) * 100;
+    
+    // Progresso geral considerando todos os arquivos
+    const overallProgress = ((fileIndex * 100) + fileProgress) / totalFiles;
+    
+    const percent = Math.floor(overallProgress);
+    progressText.textContent = `${percent}%`;
+}
 
 // Compactar arquivos
 compressBtn.addEventListener("click", () => {
-
     const zip = new JSZip();
     const files = Array.from(fileInput.files);
     if (files.length === 0) {
         alert("Selecione pelo menos um arquivo.");
         return;
     }
-
-    // Ativando barra de carregamneto
-    load.style.display = "flex";
-
+    
     // Reset do progresso
     progressText.textContent = '';
-    progressBar.style.width = '0%';
-    downloadBtn.disabled = true;
-
+    
     let completed = 0;
     const totalFiles = files.length;
 
-    files.forEach((file) => {
+    files.forEach((file, index) => {
         const reader = new FileReader();
-
-        reader.onload = function (e) {
+        
+        // ✅ Evento de progresso em tempo real
+        reader.onprogress = function(e) {
+            if (e.lengthComputable) {
+                updateProgress(e.loaded, e.total, completed, totalFiles);
+            }
+        };
+        
+        reader.onload = function(e) {
             zip.file(file.name, e.target.result);
             completed++;
+            
+            // Progresso quando arquivo é completamente lido
+            updateProgress(1, 1, completed, totalFiles);
 
             if (completed === totalFiles) {
+                // Mostrar progresso da compressão
                 progressText.textContent = 'Compactando...';
-
+                
                 const nivel = nivelSelect.value;
                 const level = getCompressionLevel(nivel);
 
@@ -86,45 +99,31 @@ compressBtn.addEventListener("click", () => {
                     compression: "DEFLATE",
                     compressionOptions: { level }
                 }, function updateCallback(metadata) {
-                    const percent = Math.floor(metadata.percent);
-                    progressBar.style.width = percent + "%";
-                    progressText.textContent = percent + "%";
-                })
-                .then((blob) => {
+                    progressText.textContent = `Compactando...`;
+                }).then((blob) => {
                     zipBlob = blob;
                     progressText.textContent = 'Concluído!';
-                    progressBar.style.width = '100%';
+                    
                     downloadBtn.disabled = false;
-                })
-                .catch((error) => {
+                }).catch((error) => {
                     console.error('Erro na compressão:', error);
                     progressText.textContent = 'Erro na compressão!';
                 });
             }
         };
-
-        reader.onerror = function () {
+        
+        // ✅ Tratamento de erro
+        reader.onerror = function() {
             progressText.textContent = `Erro ao ler ${file.name}`;
             console.error('Erro ao ler arquivo:', file.name);
         };
-
+        
         reader.readAsArrayBuffer(file);
     });
 });
 
-// Download
+// Download com verificação melhorada
 downloadBtn.addEventListener('click', () => {
-
-    // Desativa a barra de carregamento suavimente
-    setTimeout(() => {
-        load.style.opacity = "0";
-
-        setTimeout(() => {
-            load.style.display = "none";
-        }, 500);
-
-    },1000);
-
     if (!zipBlob) {
         alert('Compacte os arquivos primeiro!');
         return;
@@ -134,7 +133,7 @@ downloadBtn.addEventListener('click', () => {
     if (newNameInput && newNameInput.value) {
         newName = newNameInput.value.trim() || 'meu_arquivo.zip';
     }
-
+    
     const fileName = newName.endsWith('.zip') ? newName : `${newName}.zip`;
 
     try {
@@ -143,15 +142,15 @@ downloadBtn.addEventListener('click', () => {
         link.href = url;
         link.download = fileName;
         link.style.display = 'none';
-
+        
         document.body.appendChild(link);
         link.click();
-
+        
         setTimeout(() => {
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
         }, 100);
-
+        
     } catch (error) {
         console.error('Erro no download:', error);
         alert('Erro ao baixar: ' + error.message);
