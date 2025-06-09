@@ -149,50 +149,55 @@
             </div>
         </section>
 
-        <div class="feedback">
-
-            <a>
-                X
-            </a>
+        <form id="formFeed">
+            <div class="feedback grid">
+                <a id="closeFeedback">
+                    X
+                </a>
             
-            <h3>🗣️ Sua opinião é muito importante!</h3>
-            <p>Queremos evoluir sempre, e seu feedback é essencial para melhorar o Veloify!</p>
-
-            <div class="flex gap-1">
-                <div class="feed">
-                    <input type="radio" id="Excelente" name="feedback">
-                    <p>Excelente 😍</p>
+                <h3>Oooooba! Missão cumprida com sucesso! 🧙‍♀️✨</h3>
+                <p>
+                    Ficou satisfeito? Sua opinião ajuda o Veloify a ficar cada vez melhor! 🥰
+                </p>
+                <div class="flex gap-1">
+                    <div class="feed">
+                        <input type="radio" id="Excelente" value="Excelente" name="feedback">
+                        <p>Excelente 😍</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Muito-Bom" value="Muito-Bom" name="feedback">
+                        <p>Muito bom 😊</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Bom" value="Bom" name="feedback">
+                        <p>Bom 🙂</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Regular" value="Regular" name="feedback">
+                        <p>Regular 😕</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Ruim" value="Ruim" name="feedback">
+                        <p>Ruim 😞</p>
+                    </div>
                 </div>
-                <div class="feed">
-                    <input type="radio" id="muitoBom" name="feedback">
-                    <p>Muito bom 😊</p>
+                <div class="textarea">
+                    <textarea name="suggestion" id="suggestion" placeholder="Conte como podemos deixar o Veloify ainda melhor! (opcional):"></textarea>
                 </div>
-                <div class="feed">
-                    <input type="radio" id="bom" name="feedback">
-                    <p>Bom 🙂</p>
-                </div>
-                <div class="feed">
-                    <input type="radio" id="regular" name="feedback">
-                    <p>Regular 😕</p>
-                </div>
-                <div class="feed">
-                    <input type="radio" id="ruim" name="feedback">
-                    <p>Ruim 😞</p>
-                </div>
+                <button class="grid">Enviar</button>
             </div>
+        </form>
+        <section id="feedback-success" class="none"">
+            <h3>Yay! Missão cumprida com sucesso! 🧙‍♀️✨</h3>
+            <p>Seu feedback foi enviado com sucesso! Obrigada por ajudar o Veloify a crescer 💜</p>
+        </section>
 
-            <div class="textarea">
-                <textarea name="suggestion" id="suggestion" placeholder="Conte como podemos deixar o Veloify ainda melhor! (opcional):"></textarea>
-            </div>
-            <button class="grid">Enviar</button>
-        </div>
-
-        <div class="about container">
+        <section class="about container">
             <h2>O que é arquivo zip?</h2>
             <p>Um arquivo ZIP é um formato que compacta e agrupa vários arquivos ou pastas em um só, reduzindo o tamanho e facilitando o envio ou armazenamento. Ele pode ser aberto facilmente em qualquer sistema e pode ter senha. É útil para organizar e compartilhar vários arquivos de uma vez.</p>
-        </div>
+        </section>
 
-        <div class="cards container grid">
+        <section class="cards container grid">
             <h2>Criando um arquivo ZIP</h2>
             <div class="flex gap-1">
                 <div class="card grid gap-1">
@@ -211,7 +216,7 @@
                     <img src="../assets/image/compactar.png" alt="">
                 </div>
             </div>
-        </div>
+        </section>
 
         <footer class="container grid gap-2">
             <ul rule="list" class="grid gap-1">

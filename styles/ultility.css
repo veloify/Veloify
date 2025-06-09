@@ -71,6 +71,9 @@ p{
 .grid{
     display: grid;
 }
+.none{
+    display: none;
+}
 
 .gap-1{
     gap: 1rem;

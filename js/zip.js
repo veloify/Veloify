@@ -7,6 +7,7 @@ const newNameInput = document.getElementById("newName");
 const downloadBtn = document.getElementById("downloadBtn");
 const nivelSelect = document.getElementById("nivelCompactacao");
 const load = document.querySelector(".load");
+const formFeed = document.getElementById("formFeed");
 
 
 let zipBlob = null;
@@ -125,6 +126,11 @@ downloadBtn.addEventListener('click', () => {
 
     },1000);
 
+    setTimeout(() =>{
+        formFeed.style.transition = "all 1s ease";
+        formFeed.style.display = "initial"
+    },900);
+
     if (!zipBlob) {
         alert('Compacte os arquivos primeiro!');
         return;
@@ -157,3 +163,34 @@ downloadBtn.addEventListener('click', () => {
         alert('Erro ao baixar: ' + error.message);
     }
 });
+
+const form = document.getElementById('formFeed');
+const successMessage = document.getElementById('feedback-success');
+
+form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/manjeeod", {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+    
+    // Oculta a mensagem de sucesso após 8 segundos
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 8000);
+
+    if (response.ok) {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+
+    } else {
+        alert('Ops! Algo deu errado. 😢 Tente novamente mais tarde.');
+    }
+});
+
