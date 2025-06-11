@@ -1,0 +1,218 @@
+body{
+    background: transparent;
+}
+#velobot{
+    --bg-velobot: #f1e4fd;
+    display: grid;
+    background-color: var(--bg-velobot);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+
+    transform-origin: bottom right;
+    transform: scale(1);
+
+    box-sizing: border-box;
+
+
+    /* animation: close-animation 1s ease; */
+
+    & header{
+        --bg-header-velo: var(--shadow-card-btn);
+        --border-header: var(--btn-hover-shadow);
+        padding-block: 1.5rem 1rem;
+        text-align: center;
+        border-bottom-style: solid;
+        border-color: var(--border-header);
+        height: 5rem;
+        border-bottom-width: 0.15rem;
+
+        background-color: var(--bg-header-velo);
+        border-radius: inherit;
+
+        & span{
+            position: absolute;
+            left: 0.75rem;
+            top: 1rem;
+    
+            border: 1px solid var(--background-cards);
+            border-radius: 0.5rem;
+            padding: 0.1rem 0.2rem;
+    
+            color: var(--background-cards);
+            box-shadow: 0 0 1rem;
+        }
+
+        & .velobot-close{
+            position: absolute;
+            right: 0.75rem;
+            top: 1rem;
+    
+            width: 1rem;
+            cursor: pointer;
+    
+            
+            &:hover{
+                animation: close 500ms ease forwards;
+            }
+    
+            & > img{
+                width: 1rem;
+            }
+        }
+    }
+
+    & main{
+        padding-inline: 1rem;
+        width: 100%;
+        height: 87%;
+        overflow-y: scroll;
+        
+        & .velobot-alert{
+            margin-block: 1rem 2rem;
+            & h3{
+                text-align: center;
+            }
+            & > p{
+                --acessa: var(--background-cards);
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+                & > a{
+                    color: var(--acessa);
+                }
+            }
+        }
+
+        & .velobot-chat{
+            gap: 0.875rem;
+
+            & .user{
+                justify-self: end;
+                width: fit-content;
+                background-color: var(--btn-hover-shadow);
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
+            }
+    
+            & .velobot{
+                background-color: var(--shadow-card-btn);
+                width: 80%;
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
+            }
+        }
+
+        
+        
+    }
+    & .input-send{
+        --bg-input-send-velo: var(--shadow-card-btn);
+        --border-send-input: var(--btn-hover-shadow);
+        position: absolute;
+        bottom: 0;
+        padding-block: 0.4rem 1rem;
+        padding-inline: 1rem;
+        background-color: var(--bg-input-send-velo);
+        width: 100%;
+
+        border-top-style: solid;
+        border-color: var(--border-send-input);
+        border-top-width: 0.15rem;
+
+        & .userinput{
+            --border-velobot: var(--background-cards);
+
+            width: 85%;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-velobot);
+            color: var(--text-color-primary);
+
+            font: var(--text);
+
+            &:focus{
+                outline: 1px solid var(--border-velobot);
+            }
+        }
+
+        & button{
+            position: absolute;
+            top: 0.4rem;
+            right: 1rem;
+            bottom: 1.5rem;
+
+            border: none;
+            background: none;
+            width: 2.5rem;
+            cursor: pointer;
+
+            z-index: 10;
+
+            & svg{
+                --color-send: var(--background-cards);
+                transform: rotate(310deg);
+
+                & path{
+                    stroke: var(--color-send);
+                }
+            }
+        }
+
+    }
+
+}
+
+#velobot.fade-out{
+    animation: close-animation 1s ease;
+}
+
+@keyframes close{
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes close-animation{
+    60% {  
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@media (width >= 35em){
+    #velobot{
+        border-top-left-radius: 1.5rem;
+        bottom: 0;
+        width: 35rem;
+        height: 80%;
+
+        & main{
+            padding-inline: 1em;
+
+        }
+        & main{
+            & .velobot{
+                max-width: 85%;
+            }
+        }
+        & .input-send{
+
+            bottom: 0;
+            padding-block: 0.5rem 1.5rem;
+
+            & .userinput{
+                width: 85%;
+                
+            }
+
+            & button{
+                right: 1.7rem;
+            }
+        }
+    }
+}

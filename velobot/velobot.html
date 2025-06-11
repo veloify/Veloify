@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <!-- fonte Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- fonte Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../styles/index.css">
+        <title>VeloBot</title>
+    </head>
+    <body>
+        <section id="velobot">
+            <header>
+                <span class="beta">Beta</span>
+                <h3>Assistente - VeloBot</h3>
+                <a onclick="window.parent.closeVeloBotIframe()" class="velobot-close" id="velobotClose">
+                    <img src="../assets/icons/close.svg" alt="">
+                </a>
+            </header>
+
+            <main>
+                <section class="velobot-alert">
+                    <h3>🤖 Olá! Eu sou o VeloBot!</h3>
+                    <p>
+                        Ainda estou em fase beta, então talvez não consiga responder tudo certinho.
+                        Se eu não ajudar como você espera, é só chamar a gente no suporte!
+                        <a href="">📬 Acessar suporte</a>
+                    </p>
+                </section>
+
+                <section id="chat" class="velobot-chat grid">
+                    <p id="user" class="user grid">como compactar um pdf?</p>
+
+                    <p id="veloBot" class="velobot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laudantium repudiandae magnam sequi voluptatibus alias soluta.</p>
+
+                </section>
+            </main>
+
+            <section class="input-send">
+                <input type="text" class="userinput" id="userInput" placeholder="Como posso te ajudar">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                    <path d="M5,12L19,12M19,12L12,5M19,12L12,19" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        fill="none"/>
+                    </svg>
+                </button>
+            </section>
+
+        </section>
+
+        <script src="../js/closebot.js"></script>
+    </body>
+</html>

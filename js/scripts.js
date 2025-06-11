@@ -40,12 +40,22 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+function closeVeloBotIframe() {
+  const iframe = document.getElementById("veloBotIframe");
+  iframe.classList.add("fade-out");
 
-// função para fechar o feedback
-const closeFeed = document.getElementById("closeFeedback");
-closeFeed.addEventListener("click", () => {
-  const formFeed = document.getElementById("formFeed");
+  setTimeout(() => {
+    iframe.style.display = "none";
+  }, 700);
+}
 
-  formFeed.style.display = "none"
 
+window.addEventListener("message", (event) => {
+  if (event.data === "abrir-velobot") {
+    const velobotIframe = document.getElementById("veloBotIframe");
+
+    if (velobotIframe) {
+      velobotIframe.style.display = "grid";
+    }
+  }
 });

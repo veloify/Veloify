@@ -1,0 +1,63 @@
+body{
+    background: transparent;
+}
+
+#iconBot{
+    align-items: center;
+    width: 7rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    & span{
+        --velo-color: var(--text-color-primary);
+        text-align: center;
+        font: var(--text-sm);
+        color: var(--velo-color);
+        text-shadow: 0px 0px 10px var(--background-cards);
+        margin-bottom:  -0.75rem;
+    }
+
+    & button{
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+    
+        border: none;
+        background: none;
+    
+        width: 5rem;
+        
+        & > img{
+            width: 5rem;
+        }
+    }
+}
+
+
+/* @media (width >= 35em){
+    #iconBot{
+
+        bottom: 0;
+        right: 0;
+
+        width: 10rem;
+
+        & span{
+            font: var(--text);
+        }
+
+        & button{
+            width: 6rem;
+            
+            & > img{
+                width: 6rem;
+            }
+        }
+    }
+} */

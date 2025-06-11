@@ -5,3 +5,5 @@
 @import url(documents.css);
 @import url(zip.css);
 @import url(feedback.css);
+@import url(../velobot/velobot.css);
+@import url(../velobot/veloicon.css);

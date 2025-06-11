@@ -72,3 +72,52 @@
         --px-lg: 2rem;
     }
 }
+
+#veloIconIframe{
+    display: grid;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 7rem;
+    height: 7rem;
+
+    z-index: 15;
+
+    /* deixando a borda transparente */
+    border-color: #14532d00;
+
+}
+
+#veloBotIframe{
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+
+    /* deixando a borda transparente */
+    border: 1px solid #14532d00
+}
+
+#veloBotIframe.none{
+    display: none;
+}
+
+@media (width >= 35em){
+    
+    #veloIconIframe{
+        bottom: 2rem;
+        right: 2.5rem;
+        transform: scale(1.3);
+
+    }
+    
+    #veloBotIframe{
+        width: 35rem;
+        height: 80%;
+        border-top-left-radius
+        : 1.5rem;
+    }
+}
