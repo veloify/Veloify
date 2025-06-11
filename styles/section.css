@@ -9,6 +9,8 @@ header.container{
     & nav.flex{
         font: 700 1rem/1.2 var(--font-poppins);
 
+        
+
         & a strong{
             font: 700 1rem/1.2 var(--font-poppins);
         }
@@ -22,15 +24,15 @@ header.container{
         }
         & #menu{
 
-            position: absolute;
-            top: -1.5rem;
+            position: fixed;
+            top: 0;
             left: -100%;
             opacity: 0;
 
-            height: 102vh;
+            height: 100%;
 
             padding-block: 1.5rem;
-            padding-inline: 1.5rem 4rem;
+            padding-inline: 4rem;
             width: fit-content;
             background-color: var(--background-header-footer);
 
