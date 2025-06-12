@@ -457,6 +457,9 @@ header.container{
     
     & header{
         text-align: center;
+        & p{
+            margin-top: 0.75rem;
+        }
     }
     
     & .cards{
@@ -481,6 +484,9 @@ header.container{
                 margin-top: 1.5rem;
                 padding: 1rem;
                 width: 80%;
+
+                font: var(--text);
+
                 color: var(--text-color-secondary);
                 letter-spacing: 0.08rem;
                 background-color: var(--background-btn);
@@ -498,6 +504,11 @@ header.container{
 /* Tablets */
 @media (width >= 48em){
     #features{
+        & header{
+            & p{
+                max-width: 40rem;
+            }
+        }
         & .cards{
             align-items: center;
             width: 100%;
@@ -660,12 +671,16 @@ header.container{
     
         & .cards{
             margin-top: 2.5rem;
+            justify-content: center;
+            align-items: center;
             gap: 2rem;
 
             width: 70%;
             
             & .card{
                 gap: 1.5rem;
+
+                width: 30rem;
 
                 transition: transform 200ms linear;
     
@@ -709,18 +724,31 @@ header.container{
 /* ========= Footer ========== */
 
 footer{
-    padding: 2.5rem 2rem;
+    padding: 3rem 2rem 8rem;
+
+    position: relative;
+
     & ul{
         font: var(--text);
         & h2{
             margin-bottom: 1.rem;
         }
     }
+
+    & .footer-bottom{
+        text-align: center;
+        width: 100%;
+
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 2rem;
+    }
 }
 /* Tablets */
 @media (width >= 48em){
     footer{
-        padding: 3.5rem 3rem;
+        padding: 3.5rem 3rem 8rem;
 
         & ul{
             & li a{
@@ -761,7 +789,7 @@ footer{
 /* Desktop */
 @media (width >= 80em){
     footer{
-        padding-block: 5rem 4rem;
+        padding-block: 5rem 6rem;
         grid-template-columns: repeat(3, 1fr);
 
         & ul{
