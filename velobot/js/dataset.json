@@ -1,0 +1,18 @@
+[
+  {
+    "keywords": ["criar", "pdf", "pdf?", "pdf??"],
+    "resposta": "Você pode criar um PDF acessando a aba de criação do Veloify!"
+  },
+  {
+    "keywords": ["compactar", "zip", "arquivos", "?", "??"],
+    "resposta": "Para compactar arquivos em ZIP, vá até a seção de compactação no site."
+  },
+  {
+    "keywords": ["editar", "edita", "texto", "textos", "pdfs", "pdf", "pdf?", "pdf??"],
+    "resposta": "Em breve teremos a função de edição de PDFs. Fique ligada nas atualizações!"
+  },
+  {
+    "keywords": ["limpar", "chat", "clear"],
+    "resposta": "Para limpar o chat, digite 'clear', em seguida o VeloBot vai limpar o seu chat! 😎"
+  }
+]
