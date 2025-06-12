@@ -48,19 +48,17 @@
 
             <nav class="flex gap-1">
                 
-                <a onclick="toggleMenu()" class="flex menu" href="#">
-                    <strong>Menu</strong>
-                    
+                <a onclick="toggleMenu()" class="flex menu">
+                    <strong>Menu</strong>        
                     <svg
                         width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.8125 10.5C17.8125 10.7486 17.7137 10.9871 17.5379 11.1629C17.3621 11.3387 17.1236 11.4375 16.875 11.4375H3.125C2.87636 11.4375 2.6379 11.3387 2.46209 11.1629C2.28627 10.9871 2.1875 10.7486 2.1875 10.5C2.1875 10.2514 2.28627 10.0129 2.46209 9.83709C2.6379 9.66127 2.87636 9.5625 3.125 9.5625H16.875C17.1236 9.5625 17.3621 9.66127 17.5379 9.83709C17.7137 10.0129 17.8125 10.2514 17.8125 10.5ZM3.125 6.4375H16.875C17.1236 6.4375 17.3621 6.33873 17.5379 6.16291C17.7137 5.9871 17.8125 5.74864 17.8125 5.5C17.8125 5.25136 17.7137 5.0129 17.5379 4.83709C17.3621 4.66127 17.1236 4.5625 16.875 4.5625H3.125C2.87636 4.5625 2.6379 4.66127 2.46209 4.83709C2.28627 5.0129 2.1875 5.25136 2.1875 5.5C2.1875 5.74864 2.28627 5.9871 2.46209 6.16291C2.6379 6.33873 2.87636 6.4375 3.125 6.4375ZM16.875 14.5625H3.125C2.87636 14.5625 2.6379 14.6613 2.46209 14.8371C2.28627 15.0129 2.1875 15.2514 2.1875 15.5C2.1875 15.7486 2.28627 15.9871 2.46209 16.1629C2.6379 16.3387 2.87636 16.4375 3.125 16.4375H16.875C17.1236 16.4375 17.3621 16.3387 17.5379 16.1629C17.7137 15.9871 17.8125 15.7486 17.8125 15.5C17.8125 15.2514 17.7137 15.0129 17.5379 14.8371C17.3621 14.6613 17.1236 14.5625 16.875 14.5625Z" fill="#1F2937"/>
-                    </svg>
-                        
+                    </svg>      
                 </a>
                 <div id="menu" class="flex">
 
                     <a class="close" onclick="toggleMenu()">
-                        <img src="assets/icons/close.svg" alt="">
+                        <img src="/assets/icons/close.svg" alt="">
                     </a>
 
                     
@@ -68,18 +66,19 @@
 
                     <div class="separetor grid">
                         <h3>serviços</h3>
-                        <a title="Clique para gerar arquivo zip" class="flex" href="pages/zip.html">Gerar ZIP</a>
+                        <a title="Clique para gerar arquivo zip" class="flex" href="/pages/zip.html">Criar ZIP</a>
                         
-                        <a title="Clique para gerar arquivo pdf" class="flex" href="#">Gerar PDF</a>
+                        <a title="Clique para gerar arquivo pdf" class="flex" href="#">Criar PDF</a>
 
-                        <a title="Clique para criar seu currículo" class="flex" href="#">Crie seu currículo</a>
-                        <a title="Clique para criar seu currículo" class="flex" href="#">veja outros serviços</a>
+                        <a title="Clique para criar seu currículo" class="flex" href="#">Crie seu Currículo</a>
+
+                        <a title="Clique para criar seu currículo" class="flex" href="#">Veja outros serviços</a>
                     </div>
 
                     
                     <div class="separetor grid">
                         <h3>Ajuda</h3>
-                        <a title="Clique para ver nossa central de ajuda" class="flex" href="#">central de atendimento</a>
+                        <a title="Clique para ver nossa central de ajuda" class="flex" href="#">Central de atendimento</a>
                     </div>
 
                     <div class="separetor grid">
@@ -110,15 +109,15 @@
         <section id="hero" class="container flex gap-2">
             
             <div class="hero-logo flex">
-                <img src="assets/image/raiz 1.png" alt="">
-                <img src="assets/image/bg-logo.png" alt="">
-                <img src="assets/image/ray.png" alt="">
-                <img src="assets/image/raiz 2.png" alt="">
+                <img src="/assets/image/raiz 1.png" alt="">
+                <img src="/assets/image/bg-logo.png" alt="">
+                <img src="/assets/image/ray.png" alt="">
+                <img src="/assets/image/raiz 2.png" alt="">
             </div>
             <div class="hero-text grid">
                 <h1>Crie ZIP, PDF e Currículos Online Grátis</h1>
                 <div class="buttons grid gap-1">
-                    <a title="Clique para gerar arquivo zip" class="btn btn-hover btn-1" href="pages/zip.html">Compactar Zip agora</a>
+                    <a title="Clique para gerar arquivo zip" class="btn btn-hover btn-1" href="/pages/zip.html">Compactar Zip agora</a>
                     <a title="Clique para ver todas nossas ferramentas" class="btn btn-hover btn-2" href="#">Ver outras ferramentas</a>
                 </div>
             </div>
@@ -137,30 +136,30 @@
 
                 <div class="card flex">
                     <h3>Criador de ZIP Online</h3>
-                    <img src="assets/icons/image-zip.svg" alt="Imagem de um arquivo zip">
+                    <img src="/assets/icons/image-zip.svg" alt="Imagem de um arquivo zip">
                     <p>
                         Transforme vários arquivos em um ZIP organizado e compactado. 
                         Suporta os principais formatos (PDF, JPG, DOC, XLS, etc.) até 1.5GB. 
                         Solução prática para agrupar documentos e economizar espaço.
                     </p>
-                    <a title="Clique para gerar arquivo zip" class="btn-hover" href="pages/zip.html">Criar Zip Online</a>
+                    <a title="Clique para gerar arquivo zip" class="btn-hover" href="/pages/zip.html">Criar Zip Online</a>
                 </div>
 
                 <div class="card flex">
                     <h3>Gerador de PDF</h3>
-                    <img src="assets/icons/image-pdf.svg" alt="Imagem de um arquivo pdf">
+                    <img src="/assets/icons/image-pdf.svg" alt="Imagem de um arquivo pdf">
                     <p>
                         Transforme seus conteúdos em PDF de forma rápida e simples. 
                         Nossa ferramenta permite criar PDFs básicos a partir de texto e imagens. 
                         Perfeito para documentos pessoais, listas e arquivos de referência.
                     </p>
                     
-                    <a title="Clique para gerar arquivo pdf" class="btn-hover" href="#">Criar PDF Online</a>
+                    <a title="Clique para gerar arquivo pdf" class="btn-hover" href="/pages/compactarpfd.html">Criar PDF Online</a>
                 </div>
 
                 <div class="card flex">
                     <h3>Criador de Currículo</h3>
-                    <img src="assets/icons/image-cv.svg" alt="Imagem de um currículo">
+                    <img src="/assets/icons/image-cv.svg" alt="Imagem de um currículo">
                     <strong>EM BREVE</strong>
                     <p>
                         Monte seu currículo com templates modernos e 
@@ -177,9 +176,9 @@
             </header>
             <div class="flex gap-2">
                 <div class=" image">
-                    <img src="assets/image/cv-foto.png" alt="imagem de uma computador com um Currículo">
-                    <img src="assets/image/zip-foto.png" alt="imagem de uma computador com um arquivo zip">
-                    <img src="assets/image/pdf-foto.png" alt="imagem de um arquivo pdf">
+                    <img src="/assets/image/cv-foto.png" alt="imagem de uma computador com um Currículo">
+                    <img src="/assets/image/zip-foto.png" alt="imagem de uma computador com um arquivo zip">
+                    <img src="/assets/image/pdf-foto.png" alt="imagem de um arquivo pdf">
                 </div>
                 <p>
                     O Veloify é a ferramenta web mais prática para <strong>criar ZIP online</strong>, 
@@ -198,12 +197,12 @@
             <div class="cards flex gap-1.5">
                 <div class="card grid">
                     <h3>Totalmente Gratuito</h3>
-                    <img src="assets/icons/ico-gratis.svg" alt="imagem de '100% gratís'">
+                    <img src="/assets/icons/ico-gratis.svg" alt="imagem de '100% gratís'">
                     <p>Todas as funcionalidades essenciais sem custo algum.</p>
                 </div>
                 <div class="card grid">
                     <h3>Rápido e Eficiente</h3>
-                    <img src="assets/icons/ico-fast.svg" alt="imagem de uma raio">
+                    <img src="/assets/icons/ico-fast.svg" alt="imagem de uma raio">
                     <p>
                         rocessamento ultrarrápido em segundos, sem filas de espera ou delays. 
                         Nossa ferramenta foi otimizada para entregar resultados instantâneos.
@@ -211,7 +210,7 @@
                 </div>
                 <div class="card grid">
                     <h3>Seguro e Privado</h3>
-                    <img src="assets/icons/ico-privacy.svg" alt="imagem de um escudo">
+                    <img src="/assets/icons/ico-privacy.svg" alt="imagem de um escudo">
                     <p>
                         Seus arquivos são processados localmente. Não armazenamos 
                         nada em nossos servidores.
@@ -227,15 +226,15 @@
         <footer class="container grid gap-2">
             <ul rule="list" class="grid gap-1">
                 <h2>O que o Veloify oferece?</h2>
-                <li><a title="Clique para gerar arquivo zip" href="pages/zip.html">Criar ZIP Online</a></li>
-                <li><a title="Clique para gerar PDF" href="#">Criar PDF Grátis</a></li>
+                <li><a title="Clique para gerar arquivo zip" href="/pages/zip.html">Criar ZIP Online</a></li>
+                <li><a title="Clique para gerar PDF" href="/pages/compactarpfd.html">Criar PDF Grátis</a></li>
                 <li><a title="Clique para criar currículos" href="#">Fazer Currículo Online</a></li>
             </ul>
 
             <ul rule="list" class="grid gap-1">
                 <h2>politica e termos do Veloify</h2>
-                <li><a title="Clique para ler nossa política de privacidade" href="pages/politicadeprivacidade.html">Política de Privacidade</a></li>
-                <li><a title="Clique para ler os nossos termos de uso" href="pages/termosdeuso.html">Termos de Uso</a></li>
+                <li><a title="Clique para ler nossa política de privacidade" href="/pages/politicadeprivacidade.html">Política de Privacidade</a></li>
+                <li><a title="Clique para ler os nossos termos de uso" href="/pages/termosdeuso.html">Termos de Uso</a></li>
             </ul>
 
             <ul rule="list" class="grid gap-1">
