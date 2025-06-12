@@ -7,7 +7,7 @@ function analisarMensagem(mensagem, base) {
   const palavras = mensagem.toLowerCase().split(" ");
   for (const item of base) {
     const acertos = item.keywords.filter(p => palavras.includes(p));
-    if (acertos.length >= 2) {
+    if (acertos.length >= 1) {
       return item.resposta;
     }
   }
@@ -24,7 +24,7 @@ function carregarHistorico() {
   const historico = JSON.parse(localStorage.getItem("chatVeloBot")) || [];
   historico.forEach(item => {
     mostrarMensagem(item.mensagem, "user");
-    mostrarMensagem(item.resposta, "velobot");
+    mostrarMensagem(item.resposta, "velobot")
   });
 }
 
@@ -38,15 +38,22 @@ function mostrarMensagem(texto, classe) {
   chat.appendChild(msg);
 
   if (classe === "velobot") {
+    
+    const textoComQuebras = texto.replace(/\n/g, '<br>');
+
     let index = 0;
+
+    msg.innerHTML = '';
+
     const intervalo = setInterval(() => {
       msg.textContent += texto.charAt(index);
       index++;
 
       if (index === texto.length) {
+        msg.innerHTML = textoComQuebras;
         clearInterval(intervalo);
       }
-    }, 25);
+    }, 15);
   } else {
     msg.textContent = texto;
   }

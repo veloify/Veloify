@@ -16,10 +16,17 @@ body{
     & span{
         --velo-color: var(--text-color-primary);
         text-align: center;
-        font: var(--text-sm);
+        font: var(--text-md);
         color: var(--velo-color);
-        text-shadow: 0px 0px 10px var(--background-cards);
         margin-bottom:  -0.75rem;
+
+        text-shadow: 0px 0px 1px var(--text-color-secondary);
+
+        text-shadow:
+        -1px -1px 2px var(--text-color-secondary),
+        1px -1px 2px var(--text-color-secondary),
+        -1px  1px 2px var(--text-color-secondary),
+        1px  1px 2px var(--text-color-secondary);
     }
 
     & button{

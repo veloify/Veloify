@@ -1,7 +1,8 @@
 [
   {
-    "keywords": ["criar", "pdf", "pdf?", "pdf??"],
-    "resposta": "Você pode criar um PDF acessando a aba de criação do Veloify!"
+    "keywords": ["zip", "zipar", "zipado", "zip?", "zip??"],
+
+    "resposta": "Para criar um arquivo ZIP no Veloify, siga este passo a passo detalhado: \n\n 📁 PASSO 1 - SELECIONAR ARQUIVOS: \n • Clique no botão 'Clique aqui para selecionar arquivos' ou \n • Arraste e solte seus arquivos/pastas diretamente na área indicada \n • Você pode adicionar múltiplos arquivos de uma vez \n\n ✏️ PASSO 2 - NOMEAR O ARQUIVO (Opcional):\n • Clique em 'Digite o nome do arquivo' \n • Escolha um nome personalizado para seu ZIP \n • Se não nomear, será usado um nome padrão \n\n 🔄 PASSO 3 - COMPACTAR: \n • Clique no botão 'Compactar zip' \n • Aguarde o processamento \n • Seu arquivo ZIP será gerado automaticamente. \n\n ⬇️ PASSO 4 - DOWNLOAD: \n • Clique no botão 'Baixar arquivo ZIP' que aparecerá após a compactação \n\n Acesse: Compactador Veloify 🚀"
   },
   {
     "keywords": ["compactar", "zip", "arquivos", "?", "??"],

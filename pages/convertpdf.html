@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
     <head>
 
         <!-- fonte Poppins -->
@@ -25,11 +25,10 @@
 
         <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
 
-        <title>Veloify - Política de privacidade</title>
+        <title>Compactar PDFs - Veloify</title>
         
     </head>
     <body>
-
         <header class="container flex">
 
             <nav class="flex gap-1">
@@ -90,88 +89,50 @@
             
         </header>
 
-        <section id="termos" class="container">
-            <header>
-                <h2>Política de Privacidade – Veloify</h2>
-                <small>Última atualização:  02/05/2025</small>
+        <section id="convert" class="container">
+            <header class="grid gap-1">
+                <h1>Compactar PDF</h1>
+                <h3>Reduza o tamanho dos seus arquivos em segundos, mantendo a qualidade — fácil, rápido e gratuito.</h3>
             </header>
 
-            <p> 
-                1. Compromisso com a Privacidade
-                A Veloify respeita a sua privacidade e está comprometida em proteger todas as informações que você eventualmente fornecer durante o uso dos nossos serviços.
-            </p>
+            <div class="create grid">
+                <p>Compacte seus PDFs agora</p>
 
-            <p>
-                2. Informações Coletadas
-                Atualmente, nossa plataforma:
+                <div class="upload">
 
-                Não coleta dados pessoais obrigatórios (como nome, email ou documentos).<br><br>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.2716 12.0147C22.281 12.0147 22.2904 12.0147 22.3 12.0147C25.448 12.0147 28 14.7059 28 18.0257C28 21.1197 25.7833 23.6677 22.9333 24M22.2716 12.0147C22.2904 11.7947 22.3 11.5719 22.3 11.3468C22.3 7.28927 19.1809 4 15.3333 4C11.6894 4 8.69889 6.9502 8.39249 10.7092M22.2716 12.0147C22.142 13.5301 21.5762 14.9128 20.7075 16.022M8.39249 10.7092C5.17967 11.0317 2.66663 13.8852 2.66663 17.3577C2.66663 20.5889 4.84245 23.2843 7.73329 23.9031M8.39249 10.7092C8.59243 10.6891 8.79503 10.6789 8.99996 10.6789C10.426 10.6789 11.742 11.1759 12.8006 12.0147" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.3333 17.3333V28M15.3333 17.3333C14.3997 17.3333 12.6554 19.9924 12 20.6667M15.3333 17.3333C16.2669 17.3333 18.0113 19.9924 18.6667 20.6667" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
 
-                Armazena temporariamente apenas os arquivos enviados ou gerados pelos usuários (PDFs e ZIPs).<br><br>
-
-                No futuro, caso seja implementado login ou recursos premium, dados mínimos poderão ser coletados com aviso prévio.
-            </p>
-
-            <p>
-                3. Uso das Informações
-                As informações e arquivos fornecidos:
-
-                São usados exclusivamente para gerar os documentos solicitados.
-
-                Não são compartilhados com terceiros.
-
-                São deletados automaticamente após o prazo de armazenamento temporário informado.
-            </p>
-
-            <p>
-                4. Armazenamento e Proteção de Dados
-                Utilizamos práticas de segurança para proteger os arquivos durante o período em que estiverem armazenados.
-            </p>
-
-            <p>
-                5. Mesmo com todos os esforços, o ambiente digital nunca é 100% seguro. Ao utilizar nossos serviços, o usuário reconhece este risco.
-            </p>
-
-            <p>
-                6. Cookies
-                Atualmente, Veloify não utiliza cookies para rastreamento de comportamento ou publicidade.
-
-                Cookies básicos podem ser usados futuramente para:
-
-                Melhorar a experiência de navegação.
-
-                Gerenciar sessões de usuário (em caso de login premium).
-            </p>
-
-            <p>
-                7. Compartilhamento de Dados
-                Nós não vendemos, alugamos ou compartilhamos qualquer informação dos usuários com terceiros.
-            </p>
-
-            <p>
-                8. Direitos dos Usuários
-                O usuário pode:
-
-                Solicitar a exclusão de seus arquivos antes do tempo padrão (caso ofereçamos essa opção).
-
-                Cancelar eventuais contas futuras a qualquer momento.
-            </p>
-
-            <p>
-                9. Alterações nesta Política
-                Podemos atualizar esta Política de Privacidade periodicamente. Recomendamos que revise regularmente para estar ciente das mudanças.
-            </p>
-
-            <p>
-                10. Contato
-                Dúvidas ou solicitações relacionadas à sua privacidade?
-                Entre em contato pelo e-mail: suporte.veloify@gmail.com
-            </p>
+                    <p>Clique aqui para<br>selecionar arquivos</p>
+                    <input type="file" id="inputPdf" multiple>
+                </div>
+                <small>Aceita: .pdf, .jpg, .png, .zip, .docx, .pptx — saiba mais</small>
+            </div>
         </section>
 
-        <!-- IFRAMES -->
-        <iframe id="veloIconIframe" src="../velobot/veloicon.html""></iframe>
-        <iframe id="veloBotIframe" src="../velobot/velobot.html"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <footer class="container grid gap-2">
             <ul rule="list" class="grid gap-1">
@@ -194,6 +155,7 @@
             </ul>
         </footer>
 
+        <!-- Scripts -->
         <script src="../js/scripts.js"></script>
     </body>
 </html>
