@@ -235,6 +235,13 @@
     #create{
         margin-top: 3rem;
 
+        max-width: 70rem;
+        align-items: center;
+
+        & header + .generate{
+            margin-top: 3rem;
+        }
+
         & header + .generate{
             margin-top: 3rem;
         }

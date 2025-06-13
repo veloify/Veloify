@@ -18,8 +18,8 @@ header.container{
         & .menu{
             gap: .75rem;
 
-            .flex{
-                gap: .5rem;
+            & svg{
+                margin-top: 0.1rem;
             }
         }
         & #menu{
@@ -556,31 +556,15 @@ header.container{
 
         & .image{
 
-            display: flex;
             justify-content: center;
 
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-direction: row;
 
             & img{
                 width: 5rem;
                 height: 5rem;
 
-            }
-
-            & img:nth-child(1) {
-                animation: move-image ease backwards;
-                animation-timeline: view();
-                animation-range: 25px 500px;
-            }
-            & img:nth-child(2){
-                animation: move-image ease backwards;
-                animation-timeline: view();
-                animation-range: 300px 450px;
-            }
-            & img:nth-child(3){
-                animation: move-image ease backwards;
-                animation-timeline: view();
-                animation-range: 400px 550px;
             }
         }
     }
@@ -612,10 +596,10 @@ header.container{
             justify-content: center;
             flex-direction: row;
 
-            gap: 4rem;
+            gap: 5rem;
 
             & .image{
-                gap: 2rem;
+                gap: 3rem;
     
                 & img{
                     width: 10.75rem;
@@ -623,18 +607,6 @@ header.container{
                 }
             }
         }
-    }
-}
-/* animation */
-@keyframes move-image{
-    0%{
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
     }
 }
 

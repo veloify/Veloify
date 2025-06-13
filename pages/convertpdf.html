@@ -92,14 +92,14 @@
 
         <section id="convert" class="container">
             <header class="grid gap-1">
-                <h1>Compactar PDF</h1>
-                <h3>Reduza o tamanho dos seus arquivos em segundos, mantendo a qualidade — fácil, rápido e gratuito.</h3>
+                <h1>Converter para PDF Online Grátis</h1>
+                <p>Converta seus arquivos Word, Excel, PowerPoint e imagens para PDF de forma fácil, rápida e gratuita</p>
             </header>
 
             <div class="create grid">
-                <p>Compacte seus PDFs agora</p>
+                <p><strong>Converter para PDF</strong> <br>100% GRÁTIS</p>
 
-                <div class="upload">
+                <div class="file">
 
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.2716 12.0147C22.281 12.0147 22.2904 12.0147 22.3 12.0147C25.448 12.0147 28 14.7059 28 18.0257C28 21.1197 25.7833 23.6677 22.9333 24M22.2716 12.0147C22.2904 11.7947 22.3 11.5719 22.3 11.3468C22.3 7.28927 19.1809 4 15.3333 4C11.6894 4 8.69889 6.9502 8.39249 10.7092M22.2716 12.0147C22.142 13.5301 21.5762 14.9128 20.7075 16.022M8.39249 10.7092C5.17967 11.0317 2.66663 13.8852 2.66663 17.3577C2.66663 20.5889 4.84245 23.2843 7.73329 23.9031M8.39249 10.7092C8.59243 10.6891 8.79503 10.6789 8.99996 10.6789C10.426 10.6789 11.742 11.1759 12.8006 12.0147" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,44 +109,84 @@
                     <p>Clique aqui para<br>selecionar arquivos</p>
                     <input type="file" id="inputPdf" multiple>
                 </div>
-                <small>Aceita: .pdf, .jpg, .png, .zip, .docx, .pptx — saiba mais</small>
+
+                <div class="load">
+                    <p class="porcentagem">0%</p>
+                    <div class="barra">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="porcentagem"></span>
+                </div>
+
+                <div class="alert flex">
+                    <small>Suporta até 1.5GB</small>
+                    <small>Suporta:  .doc, .docx, .xls, .xlsx, .ppt, .pptx, .jpg, .jpeg, .png, .gif, .tiff, .txt, .html</small>
+                </div>
+
+                <div id="upload" class="upload">
+                    <p>Arquivos carregados</p>
+                    <div class="uploads flex">
+                        <p id="fileName"></p>
+                        <!-- em breve -->
+                        <!-- <button id="remove">Remover</button> -->
+                    </div>
+                </div>
+
+                <div class="file-name">
+                    <p class="flex">Nome do seu novo PDF</p>
+                    <input type="text" id="newName" placeholder="Digite o nome do arquivo PDF (Opcional)">
+                </div>
+
+                <div class="btn-zip flex gap-1">
+                    <button class="button-zip" id="compressBtn">Converter para PDF</button>
+                    <button class="button-zip" id="downloadBtn" disabled>Baixar agora</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about container">
+            <h2>Seu arquivo não abre? Converta para PDF e acabe com o problema!</h2>
+            <p>Converter para PDF serve para padronizar seus documentos (Word, Excel, JPG, PPT) em um formato universal. Garanta que todos abram e visualizem seus arquivos perfeitamente, em qualquer dispositivo. Clique e simplifique!</p>
+        </section>
+
+        <section class="cards container grid">
+            <h2>Passo a passo de como converter um PDF</h2>
+            <div class="flex gap-1">
+                <div class="card grid gap-1">
+                    <h3>1° Passo</h3>
+                    <p>Clique ou arrasta a pasta/arquivo que deseja até aqui.</p>
+                    <img src="../assets/image/zip-passo1.png" alt="">
+                </div>
+                <div class="card grid gap-1">
+                    <h3>2° Passo</h3>
+                    <p>Clique em “Digite o nome do arquivo” para nomear o arquivo zip (Opcional).</p>
+                    <img src="../assets/image/renomear.png" alt="">
+                </div>
+                <div class="card grid gap-1">
+                    <h3>3° Passo</h3>
+                    <p>Clique no botão “Compactar zip”.</p>
+                    <img src="../assets/image/compactar.png" alt="">
+                </div>
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <!-- IFRAMES -->
+        <iframe id="veloIconIframe" src="../velobot/veloicon.html""></iframe>
+        <iframe id="veloBotIframe" src="../velobot/velobot.html"></iframe>
 
 
         <footer class="container grid gap-2">
             <ul rule="list" class="grid gap-1">
                 <h2>O que o Veloify oferece?</h2>
-                <li><a title="Clique para gerar arquivo zip" href="../pages/zip.html">Compactação ZIP</a></li>
-                <li><a title="Clique para gerar PDF" href="#">gera pdf</a></li>
-                <li><a title="Clique para criar currículos" href="#">Crie currículos</a></li>
+                <li><a title="Clique para gerar arquivo zip" href="/pages/zip.html">Criar ZIP Online</a></li>
+                <li><a title="Clique para gerar PDF" href="/pages/convertpdf.html">Criar PDF Grátis</a></li>
+                <li><a title="Clique para criar currículos" href="#">Fazer Currículo Online</a></li>
             </ul>
 
             <ul rule="list" class="grid gap-1">
                 <h2>politica e termos do Veloify</h2>
-                <li><a title="Clique para ler nossa política de privacidade" href="../pages/politicadeprivacidade.html">Política de Privacidade</a></li>
-                <li><a title="Clique para ler os nossos termos de uso" href="../pages/termosdeuso.html">Termos de Uso</a></li>
+                <li><a title="Clique para ler nossa política de privacidade" href="/pages/politicadeprivacidade.html">Política de Privacidade</a></li>
+                <li><a title="Clique para ler os nossos termos de uso" href="/pages/termosdeuso.html">Termos de Uso</a></li>
             </ul>
 
             <ul rule="list" class="grid gap-1">
@@ -158,7 +198,6 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Veloify - Ferramentas Online Gratuitas</p>
             </div>
-            
         </footer>
 
         <!-- Scripts -->

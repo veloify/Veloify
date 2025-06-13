@@ -29,9 +29,9 @@
     --font-poppins: "Poppins", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
 
-    --h1: 700 2rem/1.2 var(--font-poppins);
-    --h2: 700 1.25rem/1.5 var(--font-poppins);
-    --h3: 700 1.125rem/1.5 var(--font-poppins);
+    --h1: 700 1.7rem/1.2 var(--font-poppins);
+    --h2: 700 1.4rem/1.5 var(--font-poppins);
+    --h3: 700 1.2rem/1.5 var(--font-poppins);
     --text: 600 1rem/1.5 var(--font-montserrat);
     --text-sm: 400 .75rem/1.5 var(--font-montserrat);
     --text-md: 400 .875rem/1.5 var(--font-poppins);
@@ -50,9 +50,9 @@
 @media (width >= 48em){
     :root{
 
-        --h1: 700 2.5rem/1.2 var(--font-poppins);
-        --h2: 700 2rem/1.5 var(--font-poppins);
-        --h3: 700 1.125rem/1.5 var(--font-poppins);
+        --h1: 700 2rem/1.2 var(--font-poppins);
+        --h2: 700 1.8rem/1.5 var(--font-poppins);
+        --h3: 700 1.4rem/1.5 var(--font-poppins);
 
         --font-btn-primary: 700 1.25rem/1.2 var(--font-poppins);
         --font-btn-secondary: 500 1rem/1.2 var(--font-poppins);
@@ -91,11 +91,16 @@
 #veloBotIframe{
     display: none;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: -0.01rem;
+    bottom: -0.01rem;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     z-index: 20;
+
+
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: none;
 
     /* deixando a borda transparente */
     border: 1px solid #14532d00
@@ -117,6 +122,8 @@
     #veloBotIframe{
         width: 35rem;
         height: 80%;
+        right: -0.1rem;
+        bottom: -0.1rem;
         border-top-left-radius
         : 1.5rem;
     }
