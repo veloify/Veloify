@@ -1,51 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
-<url>
-<loc>https://veloify.vercel.app/pages/zip.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/pages/cconvertpdf.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/pages/politicadeprivacidade.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/pages/termosdeuso.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/../index.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/../pages/zip.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/../pages/politicadeprivacidade.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
-<url>
-<loc>https://veloify.vercel.app/../pages/termosdeuso.html</loc>
-<priority>1.0</priority>
-<changefreq>always</changefreq>
-<lastmod>2025-06-12</lastmod>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://veloify.vercel.app/pages/zip.html</loc>
+      <priority>1.0</priority>
+      <changefreq>always</changefreq>
+      <lastmod>2025-06-12</lastmod>
+   </url>
+   <url>
+      <loc>https://veloify.vercel.app/pages/cconvertpdf.html</loc>
+      <priority>1.0</priority>
+      <changefreq>always</changefreq>
+      <lastmod>2025-06-12</lastmod>
+   </url>
+   <url>
+      <loc>https://veloify.vercel.app/pages/politicadeprivacidade.html</loc>
+      <priority>1.0</priority>
+      <changefreq>always</changefreq>
+      <lastmod>2025-06-12</lastmod>
+   </url>
+   <url>
+      <loc>https://veloify.vercel.app/pages/termosdeuso.html</loc>
+      <priority>1.0</priority>
+      <changefreq>always</changefreq>
+      <lastmod>2025-06-12</lastmod>
+   </url>
+   <url>
+      <loc>https://veloify.vercel.app/index.html</loc>
+      <priority>1.0</priority>
+      <changefreq>always</changefreq>
+      <lastmod>2025-06-12</lastmod>
+   </url>
 </urlset>
