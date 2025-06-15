@@ -15,6 +15,11 @@ let zipBlob = null;
 // Mostrar nomes dos arquivos selecionados
 fileInput.addEventListener("change", () => {
 
+
+    setTimeout(() => {
+        compressBtn.style.display = "initial";
+    }, 200);
+
     const files = Array.from(fileInput.files);
 
     fileNameDisplay.textContent = files.length > 0
@@ -58,13 +63,18 @@ compressBtn.addEventListener("click", () => {
         return;
     }
 
+    // ativando click download
+    setTimeout(() => {
+        downloadBtn.style.display = "initial";
+    }, 200);
+
     // Ativando barra de carregamneto
     load.style.display = "flex";
 
     // Reset do progresso
     progressText.textContent = '';
     progressBar.style.width = '0%';
-    downloadBtn.disabled = true;
+    //downloadBtn.disabled = true;
 
     let completed = 0;
     const totalFiles = files.length;
@@ -126,10 +136,9 @@ downloadBtn.addEventListener('click', () => {
 
     },1000);
 
-    setTimeout(() =>{
-        formFeed.style.transition = "all 1s ease";
-        formFeed.style.display = "initial"
-    },900);
+    setTimeout(() => {
+        feedbackIframe.style.display = "grid";
+    }, 500);
 
     if (!zipBlob) {
         alert('Compacte os arquivos primeiro!');
@@ -164,33 +173,26 @@ downloadBtn.addEventListener('click', () => {
     }
 });
 
-const form = document.getElementById('formFeed');
-const successMessage = document.getElementById('feedback-success');
+window.addEventListener("message", (event) => {
+  if (event.data === "exibirSucsess") {
+    const exibirMessage = document.getElementById("feedback-success");
+    if (exibirMessage) {
+      exibirMessage.classList.remove("none");
 
-form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+      setTimeout(() => {
+        const exibirMessage = document.getElementById("feedback-success");
+        
 
-    const data = new FormData(form);
+        setTimeout(()=> {
+            exibirMessage.classList.add("none")
+        }, 400)
+        
+    }, 5000);
 
-    const response = await fetch("https://formspree.io/f/manjeeod", {
-        method: "POST",
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    });
-    
-    // Oculta a mensagem de sucesso após 8 segundos
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 8000);
-
-    if (response.ok) {
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
 
     } else {
-        alert('Ops! Algo deu errado. 😢 Tente novamente mais tarde.');
+      console.warn("Elemento #feedback-success não encontrado!");
     }
+  }
 });
 

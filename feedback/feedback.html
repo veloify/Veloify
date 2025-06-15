@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="feedback.css">
+        <title>Feedback</title>
+    </head>
+    <body>
+        <form id="formFeed">
+            <div class="feedback grid">
+                <a id="closeFeedback">
+                    X
+                </a>
+            
+                <h3>Oooooba! Missão cumprida com sucesso! 🧙‍♀️✨</h3>
+                <p>
+                    Ficou satisfeito? Sua opinião ajuda o Veloify a ficar cada vez melhor! 🥰
+                </p>
+                <div class="flex gap-1">
+                    <div class="feed">
+                        <input type="radio" id="Excelente" value="Excelente" name="feedback">
+                        <p>Excelente 😍</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Muito-Bom" value="Muito-Bom" name="feedback">
+                        <p>Muito bom 😊</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Bom" value="Bom" name="feedback">
+                        <p>Bom 🙂</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Regular" value="Regular" name="feedback">
+                        <p>Regular 😕</p>
+                    </div>
+                    <div class="feed">
+                        <input type="radio" id="Ruim" value="Ruim" name="feedback">
+                        <p>Ruim 😞</p>
+                    </div>
+                </div>
+                <div class="textarea">
+                    <textarea name="suggestion" id="suggestion" placeholder="Conte como podemos deixar o Veloify ainda melhor! (opcional):"></textarea>
+                </div>
+                <button class="grid">Enviar</button>
+            </div>
+        </form>
+
+        <script src="feedback.js"></script>
+    </body>
+</html>

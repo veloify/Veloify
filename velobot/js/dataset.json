@@ -6,7 +6,11 @@
   },
   {
     "keywords": ["pdf", "pdfs", "pdfonline", "pdfgratis", "pdfconvert", "pdfcreator", "pdfmaker", "fotopdf", "imagempdf", "arquivopdf", "documentopdf", "pdf?", "pdfs?", "pdf??", "pdfs??"],
-    "resposta": "Transformar suas imagens em PDF é super fácil e rápido! Siga este guia para converter sua imagem para PDF em poucos cliques: \n\n 📁 PASSO 1 - SELECIONAR IMAGEM: \n • Clique no botão 'Clique aqui para selecionar arquivos' e escolha a(s) imagem(ns) desejada(s) (JPG, PNG, GIF, etc.) no seu computador ou \n • Arraste e solte sua(s) imagem(ns) diretamente na área indicada. \n • Você pode adicionar múltiplas fotos para converter em um único PDF \n\n ✏️ PASSO 2 - NOMEAR SEU PDF (Opcional):\n • No campo 'Nome do seu novo PDF', você pode digitar um nome personalizado para o arquivo final, como 'Minhas Fotos de Viagem'. \n • Caso não preencha, um nome padrão será automaticamente atribuído ao seu PDF. \n\n 🔄 PASSO 3 - CONVERTER PARA PDF: \n • Clique no botão 'Converter para PDF'. \n • Aguarde alguns instantes enquanto suas imagens são processadas e transformadas em um PDF de alta qualidade. \n\n ⬇️ PASSO 4 - BAIXAR SEU PDF: \n • Assim que a conversão for concluída, o botão 'Baixar agora' ficará ativo. \n • Clique para fazer o download instantâneo do seu novo arquivo PDF, pronto para ser compartilhado ou salvo! \n\n Converta suas imagens para PDF agora e simplifique seu dia! 🚀"
+    "resposta": "📌 Como converter em PDF\n\n 📁 1. Selecione seus arquivos\n • Clique em “Selecionar arquivos” ou arraste-os para a área indicada.\n • Suporte: .txt, .jpg, .jpeg, .png\n • Você pode enviar vários arquivos para juntar em um único PDF.\n\n ✏️ 2. Nomeie o PDF (opcional)\n • Digite um nome no campo “Nome do seu novo PDF”.\n • Se não preencher, usaremos um nome padrão com o documento_veloify.\n\n 🔄 3. Converta\n • Clique em “Converter para PDF” e aguarde o processamento.\n\n ⬇️ 4. Baixe\n • Quando a conversão terminar, clique em “Baixar agora” para salvar seu novo PDF!\n\n Após o download, aproveite para deixar seu feedback! 😉"
+  },
+  {
+    "keywords": ["ola", "oi", "eii", "olá", "e aí", "eae"],
+    "resposta": "Olá, no que posso ajudar?"
   },
   {
     "keywords": ["compactar", "zip", "arquivos", "?", "??"],

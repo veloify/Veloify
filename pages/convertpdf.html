@@ -17,7 +17,6 @@
             crossorigin="anonymous">
         </script>
 
-
         <meta name="description" content="Converta arquivos Word, Excel, JPG, PNG e PowerPoint para PDF online e grátis. Rápido, seguro e sem precisar instalar nada.">
 
         <meta property="og:title" content="Converter para PDF Online Grátis | Veloify">
@@ -112,6 +111,13 @@
 
                 <div class="file">
 
+                    <div id="feedback-success" class="container none"">
+                        <h3>Yay! Missão cumprida com sucesso! 🧙‍♀️✨</h3>
+                        <p>
+                            Seu feedback foi enviado com sucesso! Obrigado por ajudar o Veloify a crescer 💜
+                        </p>
+                    </div>
+
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.2716 12.0147C22.281 12.0147 22.2904 12.0147 22.3 12.0147C25.448 12.0147 28 14.7059 28 18.0257C28 21.1197 25.7833 23.6677 22.9333 24M22.2716 12.0147C22.2904 11.7947 22.3 11.5719 22.3 11.3468C22.3 7.28927 19.1809 4 15.3333 4C11.6894 4 8.69889 6.9502 8.39249 10.7092M22.2716 12.0147C22.142 13.5301 21.5762 14.9128 20.7075 16.022M8.39249 10.7092C5.17967 11.0317 2.66663 13.8852 2.66663 17.3577C2.66663 20.5889 4.84245 23.2843 7.73329 23.9031M8.39249 10.7092C8.59243 10.6891 8.79503 10.6789 8.99996 10.6789C10.426 10.6789 11.742 11.1759 12.8006 12.0147" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M15.3333 17.3333V28M15.3333 17.3333C14.3997 17.3333 12.6554 19.9924 12 20.6667M15.3333 17.3333C16.2669 17.3333 18.0113 19.9924 18.6667 20.6667" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -126,20 +132,17 @@
                     <div class="barra">
                         <div class="progress"></div>
                     </div>
-                    <span class="porcentagem"></span>
                 </div>
 
                 <div class="alert flex">
-                    <small>Suporta até 1.5GB</small>
-                    <small>Suporta:  .doc, .docx, .xls, .xlsx, .ppt, .pptx, .jpg, .jpeg, .png, .gif, .tiff, .txt, .html</small>
+                    <small>Suporta até 100MB</small>
+                    <small>Suporta:  .txt, .jpg, jpeg, .png <strong>Em breve:</strong> suporte a outros formatos</small>
                 </div>
 
                 <div id="upload" class="upload">
                     <p>Arquivos carregados</p>
                     <div class="uploads flex">
                         <p id="fileName"></p>
-                        <!-- em breve -->
-                        <!-- <button id="remove">Remover</button> -->
                     </div>
                 </div>
 
@@ -148,9 +151,9 @@
                     <input type="text" id="newName" placeholder="Digite o nome do arquivo PDF (Opcional)">
                 </div>
 
-                <div class="btn-zip flex gap-1">
-                    <button class="button-zip" id="compressBtn">Converter para PDF</button>
-                    <button class="button-zip" id="downloadBtn" disabled>Baixar agora</button>
+                <div class="btn-pdf flex gap-1">
+                    <button class="button-pdf" id="convertPdf">Converter para PDF</button>
+                    <button class="button-pdf" id="downloadPdf">Baixar agora</button>
                 </div>
             </div>
         </section>
@@ -165,18 +168,18 @@
             <div class="flex gap-1">
                 <div class="card grid gap-1">
                     <h3>1° Passo</h3>
-                    <p>Clique ou arrasta a pasta/arquivo que deseja até aqui.</p>
-                    <img src="../assets/image/zip-passo1.png" alt="">
+                    <p>Clique ou arrasta o arquivo que deseja até aqui.</p>
+                    <img src="../assets/image/passoUmPdf.png" alt="area do input">
                 </div>
                 <div class="card grid gap-1">
                     <h3>2° Passo</h3>
-                    <p>Clique em “Digite o nome do arquivo” para nomear o arquivo zip (Opcional).</p>
-                    <img src="../assets/image/renomear.png" alt="">
+                    <p>Digite o nome que deseja para seu documento</p>
+                    <img src="../assets/image/renomearPdf.png" alt="area para digitar nome">
                 </div>
                 <div class="card grid gap-1">
                     <h3>3° Passo</h3>
-                    <p>Clique no botão “Compactar zip”.</p>
-                    <img src="../assets/image/compactar.png" alt="">
+                    <p>Clique no botão "Converter para PDF" para começar converter.</p>
+                    <img src="../assets/image/converterPdf.png" alt="area para converter o documento">
                 </div>
             </div>
         </section>
@@ -184,6 +187,7 @@
                 <!-- IFRAMES -->
         <iframe id="veloIconIframe" src="../velobot/veloicon.html""></iframe>
         <iframe id="veloBotIframe" src="../velobot/velobot.html"></iframe>
+        <iframe id="feedbackIframe" src="../feedback/feedback.html"></iframe>
 
 
         <footer class="container grid gap-2">
@@ -212,6 +216,10 @@
         </footer>
 
         <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+        <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4/dist/fontkit.umd.js"></script>
+
+        <script src="../js/convertpdf.js"></script>
         <script src="../js/scripts.js"></script>
     </body>
 </html>

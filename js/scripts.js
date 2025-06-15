@@ -59,3 +59,11 @@ window.addEventListener("message", (event) => {
     }
   }
 });
+
+window.addEventListener("message", (event) => {
+    if (event.data === "fecharFeedback") {
+      const iframe = document.getElementById("feedbackIframe");
+
+      iframe.style.display = "none";
+    }
+});

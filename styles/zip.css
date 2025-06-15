@@ -26,6 +26,7 @@
         & .file{
             --bg-upload: var(--shadow-card-btn);
             --border: var(--background-btn);
+            overflow: hidden;
 
             justify-items: center;
             text-align: center;
@@ -194,6 +195,48 @@
         margin-top: 2.5rem;
     }
 }
+
+#compressBtn, #downloadBtn{
+    display: none;
+    opacity: 0;
+    animation: opacity 1s ease forwards;
+}
+@keyframes opacity {
+    100%{
+        opacity: 1;
+    }
+}
+
+#feedback-success{
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%);
+    text-align: center;
+
+    width: 100%;
+    
+    background-color: var(--success-message);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    z-index: 10;
+    opacity: 0;
+    animation: message-sucess 1s ease forwards;
+}
+
+#feedback-success.initial{
+    display: initial;
+}
+
+@keyframes message-sucess{
+    100%{
+        opacity: 1;
+        top: 10%;
+    }
+}
+
+
 
 .about{
     margin-block: 2.5rem;
