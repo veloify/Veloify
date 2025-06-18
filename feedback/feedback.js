@@ -7,9 +7,6 @@ function fecharIframe() {
 // função para fechar o feedback
 const closeFeed = document.getElementById("closeFeedback");
 closeFeed.addEventListener("click", () => {
-  const formFeed = document.getElementById("formFeed");
-
-  formFeed.style.display = "none";
 
   fecharIframe();
 });
@@ -38,7 +35,6 @@ form.addEventListener('submit', async function (e) {
     });
 
     if (response.ok) {
-      form.style.display = 'none';
       fecharIframe();
       messageSucess();
 

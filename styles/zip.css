@@ -1,12 +1,14 @@
 #create{
     margin-top: 2.5rem;
+    
     & header{
-        justify-content: center;
         text-align: center;
     }
 
     & .generate{
-        justify-content: center;
+        margin-top: 1.5rem;
+
+        align-items: center;
         
         & > p{
             text-align: center;
@@ -51,6 +53,12 @@
                 opacity: 0;
                 cursor: pointer;
             }
+        }
+
+        & .alert{
+            margin-top: 0.2rem;
+            margin-left: 0.5rem;
+            font: var(--text-sm);
         }
 
         & .load {
@@ -296,7 +304,7 @@
                 text-align: center;
                 color: var(--text-color-secondary);
 
-                padding-block: 3.5rem 6rem;
+                padding-block: 4.5rem 7rem;
                 padding-inline: 15rem;
 
                 background-color: var(--bg-upload);
@@ -364,6 +372,7 @@
     }
 
     .cards{
+        margin-top: 5rem;
         justify-content: center;
         & .flex{
             flex-direction: column;
